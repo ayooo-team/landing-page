@@ -1,14 +1,11 @@
 'use strict';
-
+var path = require('path');
 module.exports = {
     entry: [
-        "webpack-dev-server/client?http://0.0.0.0:8080",
-        "webpack/hot/only-dev-server",
         "./index.jsx"
     ],
     output: {
-        path: __dirname + "/public/assets",
-        publicPath: "/assets",
+        path: path.join(__dirname, 'build'),
         filename: "bundle.js"
     },
     module: {
@@ -32,9 +29,5 @@ module.exports = {
                 loader: "style-loader!css-loader!sass-loader"
             }
         ]
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-    ]
+    }
 };
