@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import Navbar from './navbar.jsx';
 
 class AppContainer extends React.Component {
 
@@ -9,6 +10,7 @@ class AppContainer extends React.Component {
         return (
             <div>
                 <h1>This is inside the AppContainer</h1>
+                <Navbar />
             </div>
         );
     }
