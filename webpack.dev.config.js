@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        "./index.jsx",
+        "./src/index.jsx",
         "webpack/hot/dev-server",
         "webpack-dev-server/client?http://localhost:8080/"
     ],
