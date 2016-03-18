@@ -4,8 +4,8 @@
   "description": "The landing page for Ayooo",
   "main": "index.js",
   "scripts": {
+    "dev": "node ./utils/dev-server.js",
     "build": "webpack --config webpack.dev.config.js",
-    "dev": "webpack-dev-server --content-base=build/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

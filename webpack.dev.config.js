@@ -1,8 +1,12 @@
 'use strict';
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
     entry: [
-        "./index.jsx"
+        "./index.jsx",
+        "webpack/hot/dev-server",
+        "webpack-dev-server/client?http://localhost:8080/"
     ],
     output: {
         path: path.join(__dirname, 'build'),
@@ -25,5 +29,8 @@ module.exports = {
                 loader: "style-loader!css-loader!sass-loader"
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
 };
