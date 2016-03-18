@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        "./index.jsx",
+        "./src/js/index.jsx",
         "webpack/hot/dev-server",
         "webpack-dev-server/client?http://localhost:8080/"
     ],
@@ -18,15 +18,12 @@ module.exports = {
             {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
-                loader: "babel-loader",
-                query: {
-                    presets: ["react", "es2015"]
-                }
+                loader: "babel-loader"
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: "style-loader!css-loader!sass-loader"
+                loader: "style-loader!css-loader!postcss-loader!sass-loader"
             }
         ]
     },
