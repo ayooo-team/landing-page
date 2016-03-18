@@ -8,3 +8,21 @@
 #### Webpack dev server flags
 * --content-base requires the directory from which to serve files
 * `--content-base=myCoolFolder/` is the same as `--content-base myCoolFolder` is also the same as `--content-base myCoolFolder/`
+* `--inline` embeds the webpack-dev-server runtime to the bundle.js
+* `--hot` adds the HotModuleReplacementPlugin
+* `--watch` watches for changes to files to be bundled
+
+👻 `--hot --inline` adds the webpack/hot/dev-server into the webpack config `entry`
+
+* Ref: https://webpack.github.io/docs/webpack-dev-server.html#webpack-dev-server-cli
+
+#### Setting up Hot Module Replacement (HMR):
+* HMR requires a webpack-dev-server
+* There are multiple ways of setting up webpack-dev-server
+* (Method 1) webpack-dev-server CLI - run webpack-dev-server on CLI with the flags above
+    * Currently unsupported by webpack-dev-server version 1.14.1
+    * To use this method, downgrade to version 1.14.0
+    * See https://github.com/webpack/webpack-dev-server/issues/367
+* (Method 2) webpack-dev-server API - write the server into your codebase and run
+* (Method 3) webpack-hot-middleware - use only if you have an existing express server
+* Ref: http://andrewhfarmer.com/webpack-hmr-tutorial/
