@@ -1,0 +1,36 @@
+{
+    "how-it-works": [
+        {
+          "title": "Sender",
+          "image": "http://www.warrenphotographic.co.uk/photography/bigs/27940-Mallard-duckling-white-background.jpg",
+          "text": "Sender description goes here"
+        },
+        {
+          "title": "Ayooo",
+          "image": "http://www.warrenphotographic.co.uk/photography/bigs/27940-Mallard-duckling-white-background.jpg",
+          "text": "Ayooo description goes here"
+        },
+        {
+          "title": "Traveller",
+          "image": "http://www.warrenphotographic.co.uk/photography/bigs/27940-Mallard-duckling-white-background.jpg",
+          "text": "Traveller description goes here"
+        }
+    ],
+    "why-ayooo": [
+        {
+          "title": "Cheap",
+          "image": "http://www.warrenphotographic.co.uk/photography/bigs/27940-Mallard-duckling-white-background.jpg",
+          "text": "Cheap description goes here"
+        },
+        {
+          "title": "Fast",
+          "image": "http://www.warrenphotographic.co.uk/photography/bigs/27940-Mallard-duckling-white-background.jpg",
+          "text": "Fast description goes here"
+        },
+        {
+          "title": "Eco-Friendly",
+          "image": "http://www.warrenphotographic.co.uk/photography/bigs/27940-Mallard-duckling-white-background.jpg",
+          "text": "Eco-friendly description goes here"
+        }
+    ]
+}
