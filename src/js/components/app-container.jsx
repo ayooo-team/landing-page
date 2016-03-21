@@ -15,8 +15,8 @@ class AppContainer extends React.Component {
             <div>
                 <Navbar />
                 <HeroContainer />
-                <InfoContainer title={ "How it works" } />
-                <InfoContainer title={ "Why Ayooo?" } />
+                <InfoContainer title={ "How It Works" } id={ "how-it-works" }/>
+                <InfoContainer title={ "Why Ayooo" } id={ "why-ayooo" } />
                 <SubscribeEmail />
                 <Footer />
             </div>
