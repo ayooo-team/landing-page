@@ -1,5 +1,6 @@
+@import "helpers/_mobile.scss";
 @import "base/reset";
 @import "base/base";
-@import "base/content";
 @import "components/navbar";
 @import "components/hero-container";
+@import "components/info-block";

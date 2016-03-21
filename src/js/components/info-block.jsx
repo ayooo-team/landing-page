@@ -7,9 +7,9 @@ class InfoBlock extends React.Component {
     render () {
 
         return (
-            <div className="flex-item">
+            <div className="info-block-item">
                 <h4>{ this.props.blockTitle }</h4>
-                <img src={ this.props.blockImage } />
+                <img className="info-block-image" src={ this.props.blockImage } />
                 <p>{ this.props.blockText }</p>
             </div>
         );
