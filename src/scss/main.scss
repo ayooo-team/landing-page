@@ -1,2 +1,5 @@
-@import "navbar";
-@import "reset"
+@import "base/reset";
+@import "base/base";
+@import "base/content";
+@import "components/navbar";
+@import "components/hero-container";

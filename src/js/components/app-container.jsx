@@ -3,8 +3,7 @@
 import React from 'react';
 import Navbar from './navbar.jsx';
 import HeroContainer from './hero-container.jsx';
-import HowItWorks from './how-it-works.jsx';
-import WhyAyooo from './why-ayooo.jsx';
+import InfoContainer from './info-container.jsx';
 import SubscribeEmail from './subscribe-email.jsx';
 import Footer from './footer.jsx';
 
@@ -15,10 +14,9 @@ class AppContainer extends React.Component {
         return (
             <div>
                 <Navbar />
-                <h1>This is inside the AppContainer</h1>
                 <HeroContainer />
-                <HowItWorks />
-                <WhyAyooo />
+                <InfoContainer title={ "How it works" } />
+                <InfoContainer title={ "Why Ayooo?" } />
                 <SubscribeEmail />
                 <Footer />
             </div>
