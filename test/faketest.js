@@ -3,7 +3,7 @@
 import tape from 'tape';
 import React from 'react';
 import shallowRenderer from './utils/shallowRenderer.js';
-import Hello from '../src/hello.jsx';
+import AppContainer from '../src/js/components/app-container.jsx';
 
 tape('This is a fake test', (t) => {
 
@@ -13,7 +13,7 @@ tape('This is a fake test', (t) => {
 
 tape('this is a react test', (t) => {
 
-    const rendered = shallowRenderer(<Hello />);
+    const rendered = shallowRenderer(<AppContainer />);
     console.log(rendered);
     t.end();
 });
