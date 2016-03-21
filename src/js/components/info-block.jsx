@@ -8,10 +8,9 @@ class InfoBlock extends React.Component {
 
         return (
             <div className="flex-item">
-                <h4>{this.props.blockTitle}</h4>
-                <p>
-                    This is some text.
-                </p>
+                <h4>{ this.props.blockTitle }</h4>
+                <img src={ this.props.blockImage } />
+                <p>{ this.props.blockText }</p>
             </div>
         );
     }
