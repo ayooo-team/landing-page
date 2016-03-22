@@ -15,7 +15,8 @@ class InfoContainer extends React.Component {
 
         return (
             <div>
-                <h3>{this.props.title}</h3>
+                <a name={ this.props.id }></a>
+                <h3>{ this.props.title }</h3>
                 <div className="info-block-container">
                     { infoBlocks }
                 </div>
