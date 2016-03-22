@@ -48,7 +48,7 @@ Warning: Each child in an array or iterator should have a unique "key" prop. Che
 
 #### `Super expression must either be null or a function`
 
-Used incorrect ES6 ES6 syntax for React classes.  Should be:
+Used incorrect ES6 syntax for React classes.  Should be:
 ```js
 class myCoolComponent extends React.Component { ... }
 ```
