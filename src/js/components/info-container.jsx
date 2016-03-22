@@ -2,7 +2,7 @@
 
 import React from 'react';
 import InfoBlock from './info-block.jsx';
-import data from 'json!../../../data/info-block-data.json';
+import data from '../../../data/info-block-data.json';
 
 class InfoContainer extends React.Component {
 
