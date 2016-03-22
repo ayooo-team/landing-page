@@ -1,6 +1,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 * {
@@ -11,6 +12,10 @@ html, body {
   box-sizing: inherit;
 }
 
-div {
-    border: 1px solid black;
+h1, h2, h3, h4 {
+    margin: 0;
 }
+
+// div {
+//     border: 1px solid black;
+// }

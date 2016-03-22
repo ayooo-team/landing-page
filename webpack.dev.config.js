@@ -20,6 +20,11 @@ module.exports = {
                 loader: "json-loader"
             },
             {
+                test: /\.png$/,
+                exclude: /node_modules/,
+                loaders: "file-loader"
+            },
+            {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"

@@ -1,12 +1,29 @@
-.info-block-image {
-    max-width: 40%;
+.info-block-title {
+    margin: 1em;
+    font-size: 1.5em;
+    font-weight: lighter;;
 }
 
-.info-block-container {
-  text-align: center;
-  margin: 5vw;
+.info-block-image {
+    min-width: 0vw;
+    max-width: 50vw;
+    max-height: 35vw;
+}
 
-  p {
-    font-size: 1em;
-  }
+.info-block-item {
+    text-align: center;
+    margin: 0em 1.5em 3em 1.5em;
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 414px) {
+    .info-block-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .info-block-item {
+        flex: 1;
+    }
 }
