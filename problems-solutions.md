@@ -52,3 +52,7 @@ Used incorrect ES6 syntax for React classes.  Should be:
 ```js
 class myCoolComponent extends React.Component { ... }
 ```
+
+#### Could not type inside Mailchimp form input fields
+* All the inputs had a `value=""` attribute.
+* Removing these solved the problem.
