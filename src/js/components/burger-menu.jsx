@@ -29,7 +29,7 @@ class BurgerMenu extends React.Component {
         return (
             <div className="page-navigation">
                 <img className="burger-menu-icon" onClick={ this.burgerMenuIcon.bind(this) } src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKAFHV9BxXGPZqdqCdogeeEum0RSNy3NI-qN1khsGmNng_j14RBg" />
-                <div className="section-links">
+                <div className="section-links" style={{display: this.state.isMenuOpen}} >
                     <a className="navbar-links" style={{display: this.state.isMenuOpen}} href="#how-it-works"> How It Works </a>
                     <a className="navbar-links" style={{display: this.state.isMenuOpen}} href="#why-ayooo"> Why Ayooo </a>
                 </div>
