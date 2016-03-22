@@ -18,8 +18,8 @@ class InfoContainer extends React.Component {
                 <a className="anchor-tags" name={ this.props.id }>
                     &nbsp;
                 </a>
-                    <h3>{ this.props.title }</h3>
-                <div className="info-block-container">
+                    <h3 className={"info-container-title title-" + this.props.id}>{ this.props.title }</h3>
+                <div className={"info-block-container content-" + this.props.id}>
                     { infoBlocks }
                 </div>
             </div>

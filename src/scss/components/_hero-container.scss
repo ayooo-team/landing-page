@@ -1,9 +1,22 @@
 .hero-container {
-    top: 0;
-    height: 85vh;
+    height: 75vh;
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 .hero-background {
     width: 100%;
     height: 100%;
+}
+
+.hero-title {
+    margin: 2em 0em 0.5em 0em;
+}
+
+.hero-description {
+    font-size: 0.8em;
+    margin: 3em 0em 0em 0em;
 }

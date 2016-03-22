@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: blue;
 }
 
 .page-navigation {
@@ -16,15 +15,15 @@
 }
 
 .navbar-logo {
-    max-width: 2em;
-    margin: 1vw;
+    max-width: 4em;
+    margin: 1em 0em 0em 1em;
     display: inline-block;
     float: left;
 }
 
 .burger-menu-icon {
     max-width: 2em;
-    margin: 1vw 1vw 0vw 0vw;
+    margin: 1em 1em 0em 0em;
     cursor: pointer;
 }
 
@@ -35,5 +34,7 @@
 }
 
 .navbar-links {
+    text-align: center;
     color: white;
+    margin: 2em;
 }
