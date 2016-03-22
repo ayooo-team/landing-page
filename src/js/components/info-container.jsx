@@ -8,15 +8,15 @@ class InfoContainer extends React.Component {
 
     render () {
 
-        var infoBlocks = data[this.props.id].map( (element) => {
+        var infoBlocks = data[this.props.id].map( (element, index, array) => {
 
-            return <InfoBlock blockTitle={ element.title } blockImage={ element.image } blockText={ element.text } />
+            return <InfoBlock key={ index } blockTitle={ element.title } blockImage={ element.image } blockText={ element.text } />
         });
 
         return (
             <div>
                 <h3>{this.props.title}</h3>
-                <div className="flex-container">
+                <div className="info-block-container">
                     { infoBlocks }
                 </div>
             </div>

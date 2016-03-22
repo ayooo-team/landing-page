@@ -16,7 +16,7 @@
 
 * Ref: https://webpack.github.io/docs/webpack-dev-server.html#webpack-dev-server-cli
 
-#### Setting up Hot Module Replacement (HMR):
+#### Setting up Hot Module Replacement (HMR)
 * HMR requires a webpack-dev-server
 * There are multiple ways of setting up webpack-dev-server
 * (Method 1) webpack-dev-server CLI - run webpack-dev-server on CLI with the flags above
@@ -26,3 +26,17 @@
 * (Method 2) webpack-dev-server API - write the server into your codebase and run
 * (Method 3) webpack-hot-middleware - use only if you have an existing express server
 * Ref: http://andrewhfarmer.com/webpack-hmr-tutorial/
+
+#### importing .json files
+* install the `json-loader` as a dev-dependency.
+* prepend `json!` in front of the path to the .json file and import as normal.
+```javascript
+import data from 'json!../../../data/info-block-data.json';
+```
+
+#### Generating components from an array
+* A warning message will be received:
+```
+Warning: Each child in an array or iterator should have a unique "key" prop. Check the render method of `InfoContainer`. See https://fb.me/react-warning-keys for more information.
+```
+* This occurs because each component that is generated from mapping an array requires a unique id, as this is the way that React keeps track of what to render.
