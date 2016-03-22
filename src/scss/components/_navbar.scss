@@ -5,3 +5,24 @@
     width: 100vw;
     background-color: blue;
 }
+
+.page-navigation {
+    display: inline-block;
+    float: right;
+    p {
+        font-size: 0.5em;
+    }
+}
+
+.navbar-logo {
+    max-width: 2em;
+    margin: 1vw;
+    display: inline-block;
+    float: left;
+}
+
+.burger-menu-icon {
+    max-width: 2em;
+    margin: 1vw;
+    cursor: pointer;
+}
