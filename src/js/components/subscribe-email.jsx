@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import MailchimpForm from './mailchimp-form.jsx';
+import GoogleForm from './google-form.jsx';
 
 class SubscribeEmail extends React.Component {
 
@@ -10,7 +10,7 @@ class SubscribeEmail extends React.Component {
         return (
             <div>
                 <h3>Interested?</h3>
-                <MailchimpForm />
+                <GoogleForm />
             </div>
         );
     }
