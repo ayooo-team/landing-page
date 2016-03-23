@@ -9,7 +9,6 @@ class SubscribeEmail extends React.Component {
 
         return (
             <div className="container">
-                <h3>Interested?</h3>
                 <GoogleForm />
             </div>
         );
