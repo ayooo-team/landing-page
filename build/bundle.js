@@ -19860,6 +19860,11 @@
 	                    { className: 'section-links', onClick: this.burgerMenuIcon.bind(this), style: { display: this.state.isMenuOpen } },
 	                    _react2.default.createElement(
 	                        'a',
+	                        { className: 'navbar-links', onClick: this.burgerMenuIcon.bind(this), style: { display: this.state.isMenuOpen }, href: '#splash' },
+	                        ' HOME '
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
 	                        { className: 'navbar-links', onClick: this.burgerMenuIcon.bind(this), style: { display: this.state.isMenuOpen }, href: '#how-it-works' },
 	                        ' HOW IT WORKS '
 	                    ),
@@ -19867,6 +19872,16 @@
 	                        'a',
 	                        { className: 'navbar-links', onClick: this.burgerMenuIcon.bind(this), style: { display: this.state.isMenuOpen }, href: '#why-ayooo' },
 	                        ' WHY AYOOO '
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { className: 'navbar-links', onClick: this.burgerMenuIcon.bind(this), style: { display: this.state.isMenuOpen }, href: '#subscribe' },
+	                        ' SUBSCRIBE '
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { className: 'navbar-links', onClick: this.burgerMenuIcon.bind(this), style: { display: this.state.isMenuOpen }, href: '#footer' },
+	                        ' CONTACT US '
 	                    )
 	                )
 	            );
@@ -19919,9 +19934,14 @@
 	                'div',
 	                { className: 'hero-container' },
 	                _react2.default.createElement(
+	                    'a',
+	                    { className: 'anchor-tags', name: 'splash' },
+	                    ' '
+	                ),
+	                _react2.default.createElement(
 	                    'h1',
 	                    { className: 'hero-title' },
-	                    'A Y O O O'
+	                    'AYOOO'
 	                ),
 	                _react2.default.createElement(
 	                    'h4',
@@ -19936,6 +19956,15 @@
 	                    'goods somewhere with trusted travellers',
 	                    _react2.default.createElement('br', null),
 	                    'going in the same direction'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'subscribe-interest-button' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#subscribe' },
+	                        'SUBSCRIBE YOUR INTEREST'
+	                    )
 	                )
 	            );
 	        }
@@ -20063,7 +20092,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'info-block-item' },
-	                _react2.default.createElement('img', { className: 'info-block-image', src: this.props.blockImage }),
+	                _react2.default.createElement('img', { className: "info-block-image info-block-image-" + this.props.blockTitle, src: this.props.blockImage }),
 	                _react2.default.createElement(
 	                    'h4',
 	                    { className: 'info-block-title' },
@@ -20096,7 +20125,7 @@
 			},
 			{
 				"title": "AYOOO",
-				"image": "",
+				"image": "https://cloud.githubusercontent.com/assets/13470325/13969292/e172d87c-f079-11e5-8e6d-380f29d0857c.png",
 				"text": "We connect shippers and travellers, making sure that everything goes well."
 			},
 			{
@@ -20168,6 +20197,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'container' },
+	                _react2.default.createElement(
+	                    'a',
+	                    { className: 'anchor-tags', name: 'subscribe' },
+	                    ' '
+	                ),
 	                _react2.default.createElement(_googleForm2.default, null)
 	            );
 	        }
@@ -20271,11 +20305,55 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'footer' },
 	                _react2.default.createElement(
-	                    'h3',
-	                    null,
-	                    'Footer!'
+	                    'a',
+	                    { className: 'anchor-tags', name: 'footer' },
+	                    ' '
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'social-media' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983510/17ba569e-f0e8-11e5-88f5-6c8a7901c5b7.png' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983438/acbaf722-f0e7-11e5-984e-62f2f427864a.png' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983777/b810ec74-f0e9-11e5-8cee-45542e8f60ad.png' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983456/c1b8c910-f0e7-11e5-92a3-1c80c46b2b08.png' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983486/fb90d772-f0e7-11e5-89d5-307583c09b61.png' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983493/006aff16-f0e8-11e5-8d27-d65acc0feb1c.png' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '' },
+	                        _react2.default.createElement('img', { className: 'social-media-icon', src: 'https://cloud.githubusercontent.com/assets/13470325/13983497/02e34bb8-f0e8-11e5-8129-6105beecb13c.png' })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'footer-copyright' },
+	                    'AYOOO, Ltd. All Rights Reserved 2016'
 	                )
 	            );
 	        }
@@ -20321,7 +20399,7 @@
 
 
 	// module
-	exports.push([module.id, ".anchor-tags {\n  position: relative;\n  top: -10vh; }\n\nhtml, body {\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n\n* {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nh1, h2, h3, h4 {\n  margin: 0; }\n\nh1, h2, h3, h4, p {\n  text-align: center; }\n\n* {\n  font-family: 'Roboto', sans-serif; }\n\n.navbar {\n  height: 8vh;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.page-navigation {\n  display: inline-block;\n  text-align: right;\n  float: right; }\n  .page-navigation p {\n    font-size: 0.5em; }\n\n.navbar-logo {\n  max-width: 4em;\n  margin: 1em 0em 0em 1em;\n  display: inline-block;\n  float: left; }\n\n.burger-menu-icon {\n  max-width: 2em;\n  margin: 1em 1em 0em 0em;\n  cursor: pointer; }\n\n.section-links {\n  background-color: #000000;\n  opacity: 0.7;\n  padding: 1em; }\n\n.navbar-links {\n  text-align: center;\n  color: white;\n  margin: 2em; }\n\n.hero-container {\n  height: 75vh;\n  padding: 1.5em 1em;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center; }\n\n.hero-background {\n  width: 100%;\n  height: 100%; }\n\n.hero-title {\n  margin: 2em 0em 0.5em 0em; }\n\n.hero-description {\n  font-size: 0.8em;\n  margin: 3em 0em 0em 0em; }\n\n.info-block-title {\n  margin: 0.5em;\n  font-size: 1.5em;\n  font-weight: lighter; }\n\n.info-block-image {\n  min-width: 0vw;\n  max-width: 50vw;\n  max-height: 35vw; }\n\n.info-block-item {\n  text-align: center;\n  margin: 0em 1.5em 3em 1.5em; }\n  .info-block-item p {\n    font-size: 1em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    display: flex;\n    justify-content: space-around; }\n  .info-block-item {\n    flex: 1; } }\n\n.info-container-title {\n  font-size: 1.5em;\n  font-weight: bold;\n  width: 100%;\n  padding: 1em 0em 1em 0em; }\n\n.title-how-it-works {\n  background-color: #65b465;\n  color: #ffffff; }\n\n.content-how-it-works {\n  background-color: #b1e5b1;\n  color: #000000;\n  font-weight: lighter;\n  padding: 2em 0em 1em 0em; }\n\n.google-form-container {\n  text-align: center; }\n  .google-form-container .google-form {\n    width: 90vw;\n    height: 800px; }\n", ""]);
+	exports.push([module.id, ".anchor-tags {\n  position: relative;\n  top: -10vh; }\n\n.subscribe-interest-button {\n  text-align: center;\n  font-size: 0.8em;\n  width: auto;\n  padding: 0.7em;\n  margin: 2em auto 0em auto;\n  border-color: #65b465;\n  border-style: solid;\n  border-width: thin;\n  border-radius: 6px;\n  cursor: pointer; }\n  .subscribe-interest-button a:link, .subscribe-interest-button a:visited {\n    text-decoration: none;\n    color: #65b465; }\n\nhtml, body {\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n\n* {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nh1, h2, h3, h4 {\n  margin: 0; }\n\nh1, h2, h3, h4, p {\n  text-align: center; }\n\n* {\n  font-family: 'Roboto', sans-serif; }\n\n.navbar {\n  height: 8vh;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.page-navigation {\n  display: inline-block;\n  text-align: right;\n  float: right; }\n  .page-navigation p {\n    font-size: 0.5em; }\n\n.navbar-logo {\n  max-width: 4em;\n  margin: 1em 0em 0em 1em;\n  display: inline-block;\n  float: left; }\n\n.burger-menu-icon {\n  max-width: 2em;\n  margin: 1em 1em 0em 0em;\n  cursor: pointer; }\n\n.section-links {\n  background-color: #000000;\n  opacity: 0.7;\n  padding: 1em; }\n\n.navbar-links {\n  text-align: center;\n  color: white;\n  margin: 2em; }\n\n.hero-container {\n  height: 70vh;\n  padding: 1.5em 1em;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center; }\n\n.hero-background {\n  width: 100%;\n  height: 100%; }\n\n.hero-title {\n  margin: 2em 0em 0.5em 0em;\n  font-size: 2em;\n  letter-spacing: 15px; }\n\n.hero-description {\n  font-size: 0.8em;\n  margin: 3em 0em 0em 0em; }\n\n@media (min-width: 460px) {\n  .hero-title {\n    font-size: 4em;\n    font-weight: lighter;\n    margin: 0.5em 0em; }\n  .hero-slogan {\n    font-size: 1.5em;\n    font-weight: lighter; }\n  .hero-description {\n    font-size: 1em;\n    margin: 2em; } }\n\n.info-block-title {\n  margin: 0.5em;\n  font-size: 1.5em;\n  font-weight: lighter; }\n\n.info-block-image {\n  min-width: 0vw;\n  max-width: 50vw;\n  max-height: 35vw; }\n\n.info-block-image-SHIPPER {\n  margin: 0.5em; }\n\n.info-block-item {\n  text-align: center;\n  margin: 3em 1.5em 3em 1.5em; }\n  .info-block-item p {\n    font-size: 1em;\n    margin: 0em 1.5em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    display: flex; }\n  .info-block-item {\n    flex: 1;\n    max-width: 40vw;\n    margin: auto; }\n  .info-block-image {\n    max-width: 25vw;\n    max-height: 15vh; }\n  .info-block-image-SHIPPER {\n    margin: 1em; } }\n\n.info-container-title {\n  font-size: 1.5em;\n  font-weight: bold;\n  width: 100%;\n  padding: 1em 0em 1em 0em; }\n\n.title-how-it-works {\n  background-color: #65b465;\n  color: #ffffff; }\n\n.content-how-it-works {\n  background-color: #b1e5b1;\n  color: #000000;\n  font-weight: lighter;\n  padding: 2em 0em 1em 0em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    padding: 2em; }\n  .content-why-ayooo {\n    padding: 0em 2em 2em 2em; } }\n\n.google-form-container {\n  text-align: center;\n  min-height: 100vh; }\n\n.google-form {\n  width: 90vw;\n  min-height: 100vh;\n  font-size: 1em; }\n\n@media (min-width: 460px) {\n  .google-form-container {\n    min-height: 100vh; }\n  .google-form {\n    min-height: 100vh; } }\n\n.footer {\n  margin: 2em 0em 0em 0em; }\n\n.social-media {\n  text-align: center; }\n\n.social-media-icon {\n  width: 1.5em;\n  margin: 0.5em 0.5em; }\n\n.footer-copyright {\n  font-size: 0.7em;\n  font-weight: lighter; }\n", ""]);
 
 	// exports
 
