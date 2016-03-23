@@ -1,0 +1,21 @@
+.anchor-tags {
+    position:relative;
+    top: -10vh;
+}
+
+.subscribe-interest-button {
+    text-align: center;
+    font-size: 0.8em;
+    width: auto;
+    padding: 0.7em;
+    margin: 2em auto 0em auto;
+    border-color: #65b465;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 6px;
+    cursor: pointer;
+    a:link, a:visited {
+        text-decoration: none;
+        color: #65b465;
+    }
+}

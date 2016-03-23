@@ -8,6 +8,9 @@ class Footer extends React.Component {
 
         return(
             <div className="footer">
+                <a className="anchor-tags" name="footer">
+                    &nbsp;
+                </a>
                 <div className="social-media">
                     <a href="">
                         <img className='social-media-icon' src="https://cloud.githubusercontent.com/assets/13470325/13983510/17ba569e-f0e8-11e5-88f5-6c8a7901c5b7.png"/>
