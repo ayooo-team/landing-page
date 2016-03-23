@@ -40,3 +40,19 @@ import data from 'json!../../../data/info-block-data.json';
 Warning: Each child in an array or iterator should have a unique "key" prop. Check the render method of `InfoContainer`. See https://fb.me/react-warning-keys for more information.
 ```
 * This occurs because each component that is generated from mapping an array requires a unique id, as this is the way that React keeps track of what to render.
+
+#### Embedding an html form into a React component
+* all html attributes are written in camelCase for React (e.g "tabindex" --> "tabIndex")
+* the `for` attribute becomes `htmlFor` in React
+* css inline styling are **objects**, not strings.
+
+#### `Super expression must either be null or a function`
+
+Used incorrect ES6 syntax for React classes.  Should be:
+```js
+class myCoolComponent extends React.Component { ... }
+```
+
+#### Could not type inside Mailchimp form input fields
+* All the inputs had a `value=""` attribute.
+* Removing these solved the problem.
