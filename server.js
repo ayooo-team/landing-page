@@ -5,9 +5,9 @@ const handler = (request, response) => {
 
     const index = __dirname + "/build/index.html";
     const bundle = __dirname + "/build/bundle.js";
-    console.log(request.url);
+
     if (request.url === "/") {
-        console.log("here");
+        
         fs.readFile(index, function (error, file) {
 
             response.writeHead(200, {"Content-Type": "text/html"});
