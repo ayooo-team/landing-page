@@ -2,7 +2,7 @@
   "name": "ayooo",
   "version": "1.0.0",
   "description": "The landing page for Ayooo",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node ./utils/dev-server.js",
