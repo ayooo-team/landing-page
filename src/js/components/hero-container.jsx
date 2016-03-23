@@ -8,6 +8,9 @@ class HeroContainer extends React.Component {
 
         return (
             <div className="hero-container">
+                <a className="anchor-tags" name="splash">
+                    &nbsp;
+                </a>
                 <h1 className="hero-title">AYOOO</h1>
                 <h4 className="hero-slogan">The on-the-way social delivery network</h4>
                 <p className='hero-description'>
@@ -15,6 +18,7 @@ class HeroContainer extends React.Component {
                     <br />goods somewhere with trusted travellers
                     <br />going in the same direction
                 </p>
+                <div className="subscribe-interest-button"><a href="#subscribe">SUBSCRIBE YOUR INTEREST</a></div>
             </div>
         );
     }
