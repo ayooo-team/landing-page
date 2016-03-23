@@ -9,6 +9,9 @@ class SubscribeEmail extends React.Component {
 
         return (
             <div className="container">
+                <a className="anchor-tags" name="subscribe">
+                    &nbsp;
+                </a>
                 <GoogleForm />
             </div>
         );
