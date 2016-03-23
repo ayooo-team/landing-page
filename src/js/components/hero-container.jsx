@@ -8,7 +8,7 @@ class HeroContainer extends React.Component {
 
         return (
             <div className="hero-container">
-                <h1 className="hero-title">A Y O O O</h1>
+                <h1 className="hero-title">AYOOO</h1>
                 <h4 className="hero-slogan">The on-the-way social delivery network</h4>
                 <p className='hero-description'>
                     We connect people who want to send
