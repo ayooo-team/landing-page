@@ -10,21 +10,33 @@
     max-height: 35vw;
 }
 
-.info-block-item {
-    text-align: center;
-    margin: 0em 1.5em 3em 1.5em;
-    p {
-        font-size: 1em;
-        margin: 0em 2.5em;
-    }
+.info-block-image-SHIPPER {
+    margin: 0.5em;
 }
 
-@media (min-width: 414px) {
+.info-block-item {
+    p {
+        font-size: 1em;
+        margin: 0em 1.5em;
+    }
+    text-align: center;
+    margin: 0em 1.5em 3em 1.5em;
+}
+
+@media (min-width: 460px) {
     .info-block-container {
         display: flex;
-        justify-content: space-around;
     }
     .info-block-item {
         flex: 1;
+        max-width: 40vw;
+        margin: auto;
+    }
+    .info-block-image {
+        max-width: 25vw;
+        max-height: 15vh;
+    }
+    .info-block-image-SHIPPER {
+        margin: 1em;
     }
 }

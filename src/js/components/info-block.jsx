@@ -8,7 +8,7 @@ class InfoBlock extends React.Component {
 
         return (
             <div className="info-block-item">
-                <img className="info-block-image" src={ this.props.blockImage } />
+                <img className={ "info-block-image info-block-image-" + this.props.blockTitle } src={ this.props.blockImage } />
                 <h4 className="info-block-title">{ this.props.blockTitle }</h4>
                 <p className="info-block-text">{ this.props.blockText }</p>
             </div>
