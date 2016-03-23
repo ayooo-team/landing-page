@@ -1,8 +1,20 @@
 .google-form-container {
     text-align: center;
+    min-height: 300vh;
+}
+
+.google-form {
+    width: 90vw;
+    min-height: 300vh;
+    font-size: 1em;
+}
+
+@media (min-width: 460px) {
+    .google-form-container {
+        min-height: 160vh;
+    }
 
     .google-form {
-        width: 90vw;
-        height: 800px;
+        min-height: 160vh;
     }
 }

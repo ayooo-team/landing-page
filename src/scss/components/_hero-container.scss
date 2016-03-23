@@ -1,5 +1,5 @@
 .hero-container {
-    height: 75vh;
+    height: 70vh;
     padding: 1.5em 1em;
     display: flex;
     flex-direction: column;
@@ -14,9 +14,27 @@
 
 .hero-title {
     margin: 2em 0em 0.5em 0em;
+    font-size: 2em;
+    letter-spacing: 15px; //using 'em's here will shift the text to the left. Text-align didn't work.
 }
 
 .hero-description {
     font-size: 0.8em;
     margin: 3em 0em 0em 0em;
+}
+
+@media (min-width: 460px) {
+    .hero-title {
+        font-size: 4em;
+        font-weight: lighter;
+        margin: 0.5em 0em;
+    }
+    .hero-slogan {
+        font-size: 1.5em;
+        font-weight: lighter;
+    }
+    .hero-description {
+        font-size: 1em;
+        margin: 2em;
+    }
 }
