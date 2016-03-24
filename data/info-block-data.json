@@ -1,36 +1,36 @@
 {
     "how-it-works": [
         {
-          "title": "SHIPPER",
+          "title": "SHIPPERS",
           "image": "https://cloud.githubusercontent.com/assets/13470325/13969245/8af308d2-f079-11e5-9911-20b7efbe2279.png",
-          "text": "Tell us where and when you want your parcel to be delivered specifying size and weight "
+          "text": "Tell us where and when they want their parcel to be delivered, specifying size and weight"
         },
         {
           "title": "AYOOO",
           "image": "https://cloud.githubusercontent.com/assets/13470325/13969292/e172d87c-f079-11e5-8e6d-380f29d0857c.png",
-          "text": "We connect shippers and travellers, making sure that everything goes well."
+          "text": "Connects shippers with travellers, making sure that everything goes according to the plan"
         },
         {
           "title": "TRAVELLER",
           "image": "https://cloud.githubusercontent.com/assets/13470325/13969249/9009d6de-f079-11e5-9ff4-b8f73cebbdc4.png",
-          "text": "Share where and when you are travelling, how much room you have available"
+          "text": "Share where and when they are travelling and how much room they have available - in return they get paid for delivering the parcels"
         }
     ],
     "why-ayooo": [
         {
           "title": "FAST & CONVENIENT",
           "image": "https://cloud.githubusercontent.com/assets/13470325/13969250/95b945ce-f079-11e5-84e5-5e885bef64a0.png",
-          "text": "No time restrictions, even last minute for much less than you can find using traditional services"
+          "text": "No time restrictions (even last minute!) for much less than you can find using traditional services"
         },
         {
           "title": "COMMUNITY DRIVEN",
           "image": "https://cloud.githubusercontent.com/assets/13470325/13969254/9a98a2d8-f079-11e5-91c8-2afbbf4f93c8.png",
-          "text": "We are no a marketplace, we are a group of friends collaborating to satisfy a common need."
+          "text": "We are not a marketplace, we are a group of friends collaborating to satisfy a common need"
         },
         {
           "title": "ECO-FRIENDLY",
           "image": "https://cloud.githubusercontent.com/assets/13470325/13969261/a0ae33f4-f079-11e5-8f2f-f18fc78553dd.png",
-          "text": "AYOOO uses a resource that is already in motion. Less emissions, less fuel consumption, less road surface wear"
+          "text": "AYOOO uses resources that are already in motion. Less emissions, less fuel consumption, less road surface wear"
         }
     ]
 }
