@@ -19946,16 +19946,12 @@
 	                _react2.default.createElement(
 	                    'h4',
 	                    { className: 'hero-slogan' },
-	                    'The on-the-way social delivery network'
+	                    'The peer-to-peer delivery network'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    { className: 'hero-description' },
-	                    'We connect people who want to send',
-	                    _react2.default.createElement('br', null),
-	                    'goods somewhere with trusted travellers',
-	                    _react2.default.createElement('br', null),
-	                    'going in the same direction'
+	                    'We connect people who want to send goods somewhere with trusted travellers going in the same direction'
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -20119,36 +20115,36 @@
 	module.exports = {
 		"how-it-works": [
 			{
-				"title": "SHIPPER",
+				"title": "SHIPPERS",
 				"image": "https://cloud.githubusercontent.com/assets/13470325/13969245/8af308d2-f079-11e5-9911-20b7efbe2279.png",
-				"text": "Tell us where and when you want your parcel to be delivered specifying size and weight "
+				"text": "Tell us where and when they want their parcel to be delivered, specifying size and weight"
 			},
 			{
 				"title": "AYOOO",
 				"image": "https://cloud.githubusercontent.com/assets/13470325/13969292/e172d87c-f079-11e5-8e6d-380f29d0857c.png",
-				"text": "We connect shippers and travellers, making sure that everything goes well."
+				"text": "Connects shippers with travellers, making sure that everything goes according to the plan"
 			},
 			{
 				"title": "TRAVELLER",
 				"image": "https://cloud.githubusercontent.com/assets/13470325/13969249/9009d6de-f079-11e5-9ff4-b8f73cebbdc4.png",
-				"text": "Share where and when you are travelling, how much room you have available"
+				"text": "Share where and when they are travelling and how much room they have available - in return they get paid for delivering the parcels"
 			}
 		],
 		"why-ayooo": [
 			{
 				"title": "FAST & CONVENIENT",
 				"image": "https://cloud.githubusercontent.com/assets/13470325/13969250/95b945ce-f079-11e5-84e5-5e885bef64a0.png",
-				"text": "No time restrictions, even last minute for much less than you can find using traditional services"
+				"text": "No time restrictions (even last minute!) for much less than you can find using traditional services"
 			},
 			{
 				"title": "COMMUNITY DRIVEN",
 				"image": "https://cloud.githubusercontent.com/assets/13470325/13969254/9a98a2d8-f079-11e5-91c8-2afbbf4f93c8.png",
-				"text": "We are no a marketplace, we are a group of friends collaborating to satisfy a common need."
+				"text": "We are not a marketplace, we are a group of friends collaborating to satisfy a common need"
 			},
 			{
 				"title": "ECO-FRIENDLY",
 				"image": "https://cloud.githubusercontent.com/assets/13470325/13969261/a0ae33f4-f079-11e5-8f2f-f18fc78553dd.png",
-				"text": "AYOOO uses a resource that is already in motion. Less emissions, less fuel consumption, less road surface wear"
+				"text": "AYOOO uses resources that are already in motion. Less emissions, less fuel consumption, less road surface wear"
 			}
 		]
 	};
@@ -20399,7 +20395,7 @@
 
 
 	// module
-	exports.push([module.id, ".anchor-tags {\n  position: relative;\n  top: -10vh; }\n\n.subscribe-interest-button {\n  text-align: center;\n  font-size: 0.8em;\n  width: auto;\n  padding: 0.7em;\n  margin: 2em auto 0em auto;\n  border-color: #65b465;\n  border-style: solid;\n  border-width: thin;\n  border-radius: 6px;\n  cursor: pointer; }\n  .subscribe-interest-button a:link, .subscribe-interest-button a:visited {\n    text-decoration: none;\n    color: #65b465; }\n\nhtml, body {\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n\n* {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nh1, h2, h3, h4 {\n  margin: 0; }\n\nh1, h2, h3, h4, p {\n  text-align: center; }\n\n* {\n  font-family: 'Roboto', sans-serif; }\n\n.navbar {\n  height: 8vh;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.page-navigation {\n  display: inline-block;\n  text-align: right;\n  float: right; }\n  .page-navigation p {\n    font-size: 0.5em; }\n\n.navbar-logo {\n  max-width: 4em;\n  margin: 1em 0em 0em 1em;\n  display: inline-block;\n  float: left; }\n\n.burger-menu-icon {\n  max-width: 2em;\n  margin: 1em 1em 0em 0em;\n  cursor: pointer; }\n\n.section-links {\n  background-color: #000000;\n  opacity: 0.7;\n  padding: 1em; }\n\n.navbar-links {\n  text-align: center;\n  color: white;\n  margin: 2em; }\n\n.hero-container {\n  height: 70vh;\n  padding: 1.5em 1em;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center; }\n\n.hero-background {\n  width: 100%;\n  height: 100%; }\n\n.hero-title {\n  margin: 2em 0em 0.5em 0em;\n  font-size: 2em;\n  letter-spacing: 15px; }\n\n.hero-description {\n  font-size: 0.8em;\n  margin: 3em 0em 0em 0em; }\n\n@media (min-width: 460px) {\n  .hero-title {\n    font-size: 4em;\n    font-weight: lighter;\n    margin: 0.5em 0em; }\n  .hero-slogan {\n    font-size: 1.5em;\n    font-weight: lighter; }\n  .hero-description {\n    font-size: 1em;\n    margin: 2em; } }\n\n.info-block-title {\n  margin: 0.5em;\n  font-size: 1.5em;\n  font-weight: lighter; }\n\n.info-block-image {\n  min-width: 0vw;\n  max-width: 50vw;\n  max-height: 35vw; }\n\n.info-block-image-SHIPPER {\n  margin: 0.5em; }\n\n.info-block-item {\n  text-align: center;\n  margin: 3em 1.5em 3em 1.5em; }\n  .info-block-item p {\n    font-size: 1em;\n    margin: 0em 1.5em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    display: flex; }\n  .info-block-item {\n    flex: 1;\n    max-width: 40vw;\n    margin: auto; }\n  .info-block-image {\n    max-width: 25vw;\n    max-height: 15vh; } }\n\n.info-container-title {\n  font-size: 1.5em;\n  font-weight: bold;\n  width: 100%;\n  padding: 1em 0em 1em 0em; }\n\n.title-how-it-works {\n  background-color: #65b465;\n  color: #ffffff; }\n\n.content-how-it-works {\n  background-color: #b1e5b1;\n  color: #000000;\n  font-weight: lighter;\n  padding: 2em 0em 1em 0em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    padding: 2em; }\n  .content-why-ayooo {\n    padding: 0em 2em 2em 2em; } }\n\n.google-form-container {\n  text-align: center;\n  min-height: 100vh; }\n\n.google-form {\n  width: 90vw;\n  min-height: 100vh;\n  font-size: 1em; }\n\n@media (min-width: 460px) {\n  .google-form-container {\n    min-height: 100vh; }\n  .google-form {\n    min-height: 100vh; } }\n\n.footer {\n  margin: 2em 0em 0em 0em; }\n\n.social-media {\n  text-align: center; }\n\n.social-media-icon {\n  width: 1.5em;\n  margin: 0.5em 0.5em; }\n\n.footer-copyright {\n  font-size: 0.7em;\n  font-weight: lighter; }\n", ""]);
+	exports.push([module.id, ".anchor-tags {\n  position: relative;\n  top: -10vh; }\n\n.subscribe-interest-button {\n  text-align: center;\n  font-size: 0.8em;\n  width: auto;\n  padding: 0.7em;\n  margin: 3em auto 0em auto;\n  border-color: #65b465;\n  border-style: solid;\n  border-width: thin;\n  border-radius: 6px;\n  cursor: pointer; }\n  .subscribe-interest-button a:link, .subscribe-interest-button a:visited {\n    text-decoration: none;\n    color: #65b465; }\n\nhtml, body {\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n\n* {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nh1, h2, h3, h4 {\n  margin: 0; }\n\nh1, h2, h3, h4, p {\n  text-align: center; }\n\n* {\n  font-family: 'Roboto', sans-serif; }\n\n.navbar {\n  height: 8vh;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.page-navigation {\n  display: inline-block;\n  text-align: right;\n  float: right; }\n  .page-navigation p {\n    font-size: 0.5em; }\n\n.navbar-logo {\n  max-width: 4em;\n  margin: 1em 0em 0em 1em;\n  display: inline-block;\n  float: left; }\n\n.burger-menu-icon {\n  max-width: 2em;\n  margin: 1em 1em 0em 0em;\n  cursor: pointer; }\n\n.section-links {\n  background-color: #000000;\n  opacity: 0.7;\n  padding: 1em; }\n\n.navbar-links {\n  text-align: center;\n  color: white;\n  margin: 2em; }\n\n.hero-container {\n  height: 80vh;\n  padding: 1.5em 1em;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center; }\n\n.hero-background {\n  width: 100%;\n  height: 100%; }\n\n.hero-title {\n  margin: 1.5em 0em 0.5em 0.1em;\n  font-size: 4.5em;\n  font-weight: lighter;\n  letter-spacing: 10px; }\n\n.hero-description {\n  font-size: 0.8em;\n  margin: 3em 0em 0em 0em; }\n\n@media (min-width: 460px) {\n  .hero-title {\n    font-size: 4em;\n    font-weight: lighter;\n    margin: 0.5em 0em; }\n  .hero-slogan {\n    font-size: 1.5em;\n    font-weight: lighter; }\n  .hero-description {\n    font-size: 1em;\n    margin: 2em; } }\n\n.info-block-title {\n  margin: 0.5em;\n  font-size: 1.5em;\n  font-weight: lighter; }\n\n.info-block-image {\n  min-width: 0vw;\n  max-width: 50vw;\n  max-height: 35vw; }\n\n.info-block-image-SHIPPERS {\n  margin: 0.5em; }\n\n.info-block-item {\n  text-align: center;\n  margin: 3em 1.5em 3em 1.5em; }\n  .info-block-item p {\n    font-size: 1em;\n    margin: 0em 1.5em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    display: flex; }\n  .info-block-item {\n    flex: 1;\n    max-width: 40vw;\n    margin: auto; }\n  .info-block-image {\n    max-width: 25vw;\n    max-height: 15vh; } }\n\n.info-container-title {\n  font-size: 1.5em;\n  font-weight: bold;\n  width: 100%;\n  padding: 1em 0em 1em 0em; }\n\n.title-how-it-works {\n  background-color: #65b465;\n  color: #ffffff; }\n\n.content-how-it-works {\n  background-color: #b1e5b1;\n  color: #000000;\n  font-weight: lighter;\n  padding: 2em 0em 1em 0em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    padding: 2em; }\n  .content-why-ayooo {\n    padding: 0em 2em 2em 2em; } }\n\n.google-form-container {\n  text-align: center;\n  min-height: 100vh; }\n\n.google-form {\n  width: 90vw;\n  min-height: 100vh;\n  font-size: 1em; }\n\n@media (min-width: 460px) {\n  .google-form-container {\n    min-height: 100vh; }\n  .google-form {\n    min-height: 100vh; } }\n\n.footer {\n  margin: 2em 0em 0em 0em; }\n\n.social-media {\n  text-align: center; }\n\n.social-media-icon {\n  width: 1.5em;\n  margin: 0.5em 0.5em; }\n\n.footer-copyright {\n  font-size: 0.7em;\n  font-weight: lighter; }\n", ""]);
 
 	// exports
 
