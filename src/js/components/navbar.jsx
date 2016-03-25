@@ -20,8 +20,6 @@ class Navbar extends React.Component {
 
         this.setState({
             isMenuOpen: !this.state.isMenuOpen
-        }, () => {
-            console.log(this.state);
         });
     }
 
