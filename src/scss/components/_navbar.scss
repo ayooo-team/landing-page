@@ -5,15 +5,6 @@
     width: 100%;
 }
 
-.page-navigation {
-    display: inline-block;
-    text-align: right;
-    float: right;
-    p {
-        font-size: 0.5em;
-    }
-}
-
 .navbar-logo {
     max-width: 4em;
     margin: 1em 0em 0em 1em;
@@ -31,10 +22,11 @@
     }
 }
 
-.section-links {
+.navbar-links-container {
     background-color: $black;
     opacity: 0.7;
     padding: 1em;
+    z-index: 2;
 
     .navbar-links {
         text-align: center;
