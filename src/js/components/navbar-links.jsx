@@ -9,7 +9,7 @@ class NavbarLinks extends React.Component {
 
         let classes = classnames(
             "navbar-links-container",
-            { "display-none": this.props.isDisplayed }
+            { "display-none": this.props.linksDisplayed }
         );
 
         return (
