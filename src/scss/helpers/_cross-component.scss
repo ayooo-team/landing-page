@@ -1,5 +1,5 @@
 .anchor-tags {
-    position:relative;
+    position: relative;
     top: -10vh;
 }
 
@@ -9,13 +9,13 @@
     width: auto;
     padding: 0.7em;
     margin: 3em auto 0em auto;
-    border-color: #65b465;
+    border-color: $light-green;
     border-style: solid;
     border-width: thin;
     border-radius: 6px;
     cursor: pointer;
     a:link, a:visited {
         text-decoration: none;
-        color: #65b465;
+        color: $light-green;
     }
 }
