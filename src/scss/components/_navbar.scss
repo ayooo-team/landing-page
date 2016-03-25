@@ -40,5 +40,10 @@
         text-align: center;
         color: $white;
         margin: 2em;
+        display: block;
+
+        @media (min-width: 460px) {
+            display: inline-block;
+        }
     }
 }
