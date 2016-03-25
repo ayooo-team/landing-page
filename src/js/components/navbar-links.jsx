@@ -7,9 +7,11 @@ class NavbarLinks extends React.Component {
 
     render () {
 
+        console.log(this.props);
+
         let classes = classnames(
             "navbar-links-container",
-            { "display-none": !this.props.isMenuOpen }
+            { "display-none": ( !this.props.isMenuOpen) } // if mobileView and menu is open
         );
 
         return (

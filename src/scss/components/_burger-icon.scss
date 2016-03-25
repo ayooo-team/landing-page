@@ -1,4 +1,4 @@
-.nav-icon3 {
+.burger-menu-icon {
     width: 60px;
     height: 45px;
     position: absolute;
@@ -16,7 +16,7 @@
     z-index: 3;
 }
 
-.nav-icon3 span {
+.burger-menu-icon span {
     display: block;
     position: absolute;
     height: 9px;
@@ -35,44 +35,51 @@
     transition: .4s ease-in-out;
 }
 
-.nav-icon3 span:nth-child(1) {
+.burger-menu-icon span:nth-child(1) {
     top: 0px;
 }
 
-.nav-icon3 span:nth-child(2), .nav-icon3 span:nth-child(3) {
+.burger-menu-icon span:nth-child(2), .burger-menu-icon span:nth-child(3) {
     top: 18px;
 }
 
-.nav-icon3 span:nth-child(4) {
+.burger-menu-icon span:nth-child(4) {
     top: 36px;
 }
 
-.nav-icon3.menu-open span{
+.burger-menu-icon.menu-open span{
     background: $white;
 }
 
-.nav-icon3.menu-open span:nth-child(1) {
+.burger-menu-icon.menu-open span:nth-child(1) {
     top: 18px;
     width: 0%;
     left: 50%;
 }
 
-.nav-icon3.menu-open span:nth-child(2) {
+.burger-menu-icon.menu-open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.nav-icon3.menu-open span:nth-child(3) {
+.burger-menu-icon.menu-open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
-.nav-icon3.menu-open span:nth-child(4) {
+.burger-menu-icon.menu-open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
+}
+
+.burger-menu-icon {
+
+    @media (min-width: 460px) {
+        display: none;
+    }
 }

@@ -24,7 +24,7 @@ class BurgerIcon extends React.Component {
     render () {
 
         let classes = classnames(
-            "nav-icon3",
+            "burger-menu-icon",
             { "menu-open": this.props.isMenuOpen }
         );
 
