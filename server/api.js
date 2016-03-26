@@ -24,8 +24,8 @@ module.exports = {
                 if (error) throw new Error(error);
 
                 var converted = toCSV(file.toString());
-                    
-                reply(converted);
+
+                reply(file.toString());
             });
         });
     },
