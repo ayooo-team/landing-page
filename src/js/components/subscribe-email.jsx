@@ -2,6 +2,7 @@
 
 import React from 'react';
 import GoogleForm from './google-form.jsx';
+import Form from './form.jsx';
 
 class SubscribeEmail extends React.Component {
 
@@ -12,7 +13,7 @@ class SubscribeEmail extends React.Component {
                 <a className="anchor-tags" name="subscribe">
                     &nbsp;
                 </a>
-                <GoogleForm />
+                <Form />
             </div>
         );
     }
