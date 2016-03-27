@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import classnames from 'classnames';
 
 class Form extends React.Component {
 
@@ -8,24 +9,7 @@ class Form extends React.Component {
 
         super (props);
 
-        this.state = {
-            canSubmit: false
-        };
         this.submit = this.submit.bind(this)
-    }
-
-    enableButton () {
-
-        this.setState({
-            canSubmit: true
-        });
-    }
-
-    disableButton () {
-
-        this.setState({
-            canSubmit: false
-        });
     }
 
     getSelectedRadio () {
@@ -60,7 +44,7 @@ class Form extends React.Component {
             data: data,
             success: function (reply) {
                 console.log(reply);
-                this.disableButton();
+                this.props.hideForm();
             }.bind(this)
         });
     }

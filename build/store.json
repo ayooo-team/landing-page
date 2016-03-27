@@ -26,5 +26,19 @@
         "lastName": "Duck",
         "nationality": "American",
         "useOfService": "Both"
+    },
+    {
+        "email": "b@bunny.com",
+        "firstName": "Bugs",
+        "lastName": "Bunny",
+        "nationality": "American",
+        "useOfService": "Shipper"
+    },
+    {
+        "email": "j@puddleduck.com",
+        "firstName": "Jemima",
+        "lastName": "Puddleduck",
+        "nationality": "British",
+        "useOfService": "Shipper"
     }
 ]
