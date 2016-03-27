@@ -61,8 +61,8 @@ class Form extends React.Component {
             success: function (reply) {
                 console.log(reply);
                 this.disableButton();
-            }
-        }.bind(this));
+            }.bind(this)
+        });
     }
 
     render () {
@@ -85,7 +85,7 @@ class Form extends React.Component {
                 <input type="radio" name="useOfService" value="Shipper" ref="shipper">Shipper</input><br/>
                 <input type="radio" name="useOfService" value="Traveller" ref="traveller">Traveller</input><br/>
                 <input type="radio" name="useOfService" value="Both" ref="both">Both!</input><br/>
-                
+
                 <button onClick={ this.submit }>Register your interest</button>
             </div>
         );

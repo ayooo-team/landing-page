@@ -4,9 +4,8 @@ const path = require('path');
 const fs = require('fs');
 
 const filePaths = {
-    index: path.resolve(__dirname, '../build/index.html'),
-    assets: path.resolve(__dirname, '../build'),
-    store: path.resolve(__dirname, '../data/store.json')
+    store: path.resolve(__dirname, '../build/store.json'),
+    csvFile: path.resolve(__dirname, '../build/registered.csv'),
 };
 
 module.exports = {
@@ -34,16 +33,22 @@ module.exports = {
 
         var data = request.payload;
 
-        fs.readFile(filePaths.store, function(error, content) {
+        fs.readFile(filePaths.store, function(error, fileContent) {
 
-            content = JSON.parse(content);
-            content.push(data);
+            fileContent = JSON.parse(fileContent);
+            fileContent.push(data);
 
-            fs.writeFile(filePaths.store, JSON.stringify(content, null, 4), 'utf-8', function (err) {
+            fs.writeFile(filePaths.store, JSON.stringify(fileContent, null, 4), 'utf-8', function (error) {
 
-                if (err) throw new Error(err);
-                console.log("Successfully written to file");
-                reply.file(filePaths.store);
+                if (error) throw new Error(error);
+                console.log("Successfully written json");
+            });
+
+            fs.writeFile(filePaths.csvFile, toCSV(fileContent), 'utf-8', function (error) {
+
+                if (error) throw new Error(error);
+                console.log("Successfully written csv");
+                reply.file(filePaths.csvFile);
             });
         });
     }
@@ -51,8 +56,10 @@ module.exports = {
 
 function toCSV (data) {
 
-	data = JSON.parse(data);
+    if (typeof data === 'string') {
 
+        data = JSON.parse(data);
+    }
 	// get data
 	var topRow = Object.keys(data[0]).join(",") + "\r\n";
 
@@ -66,6 +73,6 @@ function toCSV (data) {
 
         return previous;
     }, topRow);
-    console.log(result);
+    
     return result;
 }

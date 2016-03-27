@@ -19,5 +19,12 @@
         "lastName": "Peep",
         "nationality": "Brit",
         "useOfService": "Shipper"
+    },
+    {
+        "email": "d@duck.com",
+        "firstName": "Daffy",
+        "lastName": "Duck",
+        "nationality": "American",
+        "useOfService": "Both"
     }
 ]
