@@ -40,5 +40,12 @@
         "lastName": "Puddleduck",
         "nationality": "British",
         "useOfService": "Shipper"
+    },
+    {
+        "email": "s@claus.com",
+        "firstName": "Santa",
+        "lastName": "Claus",
+        "nationality": "Norwegian",
+        "useOfService": "Traveller"
     }
 ]

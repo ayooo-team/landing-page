@@ -33,6 +33,7 @@ class SubscribeEmail extends React.Component {
                 <a className="anchor-tags" name="subscribe">
                     &nbsp;
                 </a>
+                <h3 className="info-container-title title-how-it-works">INTERESTED?</h3>
                 { formArea }
             </div>
         );

@@ -70,7 +70,7 @@ class Form extends React.Component {
                 <input type="radio" name="useOfService" value="Traveller" ref="traveller">Traveller</input><br/>
                 <input type="radio" name="useOfService" value="Both" ref="both">Both!</input><br/>
 
-                <button onClick={ this.submit }>Register your interest</button>
+                <div className="ghost-button" onClick={ this.submit }>Register your interest</div>
             </div>
         );
     }

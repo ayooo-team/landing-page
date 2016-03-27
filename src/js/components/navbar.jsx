@@ -6,20 +6,47 @@ import BurgerIcon from './burger-icon.jsx';
 
 class Navbar extends React.Component {
 
-    // on resize.  if now mobile, isMenuOpen = false
-    // on resize.  if now desktop, isMenuOpen = true
-
     constructor (props) {
 
         super (props);
 
         this.state = {
             isMenuOpen: false,
-            // isMobileView: false
+            isDesktopView: (window.innerWidth >= 460)
         };
+        this.handleResize = this.handleResize.bind(this);
+        this.toggleMenuVisibility = this.toggleMenuVisibility.bind(this);
     }
 
-    toggle () {
+    componentDidMount () {
+        console.log("initial state", this.state);
+        window.addEventListener('resize', this.handleResize);
+    }
+
+    handleResize () {
+
+        let windowWidth = window.innerWidth;
+
+        if (windowWidth >= 460 && !this.state.isDesktopView) {
+
+            this.setState({
+                isDesktopView: true,
+                isMenuOpen: true
+            }, () => {
+                console.log("desktop view?", this.state.isDesktopView);
+            });
+        } else if (windowWidth < 460 && this.state.isDesktopView) {
+
+            this.setState({
+                isDesktopView: false,
+                isMenuOpen: false
+            }, () => {
+                console.log("desktop view?", this.state.isDesktopView);
+            });
+        }
+    }
+
+    toggleMenuVisibility () {
 
         this.setState({
             isMenuOpen: !this.state.isMenuOpen
@@ -31,8 +58,8 @@ class Navbar extends React.Component {
         return (
             <div className="navbar">
                 <img className="navbar-logo" src="https://cloud.githubusercontent.com/assets/13470325/13969226/6819285a-f079-11e5-8d0b-ec337b6a2572.png" />
-                <BurgerIcon toggle={ this.toggle.bind(this) } isMenuOpen={ this.state.isMenuOpen } />
-                <NavbarLinks isMobileView={ this.state.isMobileView } isMenuOpen={ this.state.isMenuOpen } />
+                <BurgerIcon toggle={ this.toggleMenuVisibility } isMenuOpen={ this.state.isMenuOpen } />
+                <NavbarLinks isDesktopView={ this.state.isDesktopView } isMenuOpen={ this.state.isMenuOpen } />
             </div>
         );
     }
