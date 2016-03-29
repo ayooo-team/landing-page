@@ -19,8 +19,31 @@ class Navbar extends React.Component {
     }
 
     componentDidMount () {
-        
+
         window.addEventListener('resize', this.handleResize);
+
+        $(window).scroll(() => {
+
+
+            let scroll = $(window).scrollTop();
+
+            console.log(scroll);
+            if (this.state.isDesktopView) {
+
+                if (scroll > 100) {
+
+                    $('.navbar').addClass('scrolled');
+                    $('.navbar-logo').addClass('scrolled');
+                    $('.navbar-links-container').addClass('scrolled');
+                }
+                if (scroll <= 100) {
+
+                    $('.navbar').removeClass('scrolled');
+                    $('.navbar-logo').removeClass('scrolled');
+                    $('.navbar-links-container').removeClass('scrolled');
+                }
+            }
+        });
     }
 
     handleResize () {

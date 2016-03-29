@@ -11,8 +11,15 @@
     display: inline-block;
     float: left;
 
+
     @media (min-width: 460px) {
         max-width: 3em;
+        transition: max-width 0.2s ease;
+
+        &.scrolled {
+            max-width: 2em;
+            margin-top: 0.5em;
+        }
     }
 }
 
@@ -47,12 +54,29 @@
 
 @media (min-width: 460px) {
 
+    .navbar {
+        height: 15vh;
+        background-color: $white;
+        transition: height 0.2s ease;
+        transition: opacity 0.2s ease;
+
+        &.scrolled {
+            height: 10vh;
+            opacity: 1;
+        }
+    }
+
     .navbar-links-container {
         height: auto;
         float: right;
         margin: 2vh 0vh;
         padding: 0.5em;
-        background-color: $white;
+        background-color: transparent;
+        transition: padding 0.2s ease;
+
+        &.scrolled {
+            padding: 0.1em 0em;
+        }
 
         .navbar-links-wrapper {
             padding-top: 0;
