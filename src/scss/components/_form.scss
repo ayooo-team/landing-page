@@ -47,9 +47,10 @@ label {
     margin-top: 0.2em;
     margin-bottom: 1em;
     display: block;
-}
-@media (min-width: 460px) {
-    .form-query {
+
+    @media (min-width: 460px) {
+        font-size: 1em;
+        width: auto;
         margin: 0.2em 1em;
         display: inline-block;
     }
@@ -60,6 +61,12 @@ label {
     height: 20px;
     width: 20px;
     display: inline-block;
+
+    @media (min-width: 460px) {
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+    }
 }
 
 .form-register {
