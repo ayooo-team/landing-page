@@ -9,7 +9,7 @@ class Form extends React.Component {
 
         super (props);
 
-        this.submit = this.submit.bind(this)
+        this.checkInput = this.checkInput.bind(this)
     }
 
     getSelectedRadio () {
@@ -23,11 +23,10 @@ class Form extends React.Component {
             return option.checked;
         });
 
-        return chosenOne[0].value;
+        return chosenOne[0];
     }
 
-    submit (event) {
-
+    checkInput (event) {
         event.preventDefault();
 
         let data = {
@@ -37,6 +36,16 @@ class Form extends React.Component {
             nationality: this.refs.nationality.value,
             useOfService: this.getSelectedRadio()
         };
+
+        ( data["email"] ||
+          data["firstName"] ||
+          data["lastName"] ||
+          data["nationality"] ||
+          data["useOfService"] === "" || "undefined") ?
+         alert("Please complete all fields.") : this.submit(data);
+    }
+
+    submit (data) {
 
         $.ajax({
             method: 'POST',
@@ -54,23 +63,35 @@ class Form extends React.Component {
         return (
             <div className="form">
                 <label>Email address</label>
-                <input type="email" ref="email" /><br/>
+                <input className="" type="email" ref="email" /><br/>
 
-                <label>First name</label>
+                <label className="form-label">First name</label>
                 <input type="text" ref="firstName" /><br/>
 
-                <label>Last name</label>
+                <label className="form-label">Last name</label>
                 <input type="text" ref="lastName" /><br/>
 
-                <label>Nationality</label>
+                <label className="form-label">Nationality</label>
                 <input type="text" ref="nationality" /><br/>
 
-                <label>How will you use our service?</label><br/>
-                <input type="radio" name="useOfService" value="Shipper" ref="shipper">Shipper</input><br/>
-                <input type="radio" name="useOfService" value="Traveller" ref="traveller">Traveller</input><br/>
-                <input type="radio" name="useOfService" value="Both" ref="both">Both!</input><br/>
-
-                <div className="ghost-button" onClick={ this.submit }>Register your interest</div>
+                <div className="form-query-container">
+                    <label>How will you use our service?</label><br/>
+                    <div className="form-query">
+                        <input className="form-radio" type="radio" name="useOfService" value="Shipper" ref="shipper" />
+                        Shipper
+                    </div>
+                    <div className="form-query">
+                        <input className="form-radio" type="radio" name="useOfService" value="Traveller" ref="traveller" />
+                        Traveller
+                    </div>
+                    <div className="form-query">
+                        <input className="form-radio" type="radio" name="useOfService" value="Both" ref="both" />
+                        Both!
+                    </div>
+                </div>
+                <div className="form-register">
+                    <a className="ghost-button form-register" onClick={ this.checkInput }>Register your interest</a>
+                </div>
             </div>
         );
     }
