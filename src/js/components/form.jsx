@@ -32,7 +32,8 @@ class Form extends React.Component {
           data["firstName"] &&
           data["lastName"] &&
           data["nationality"] &&
-          data["useOfService"] ) ? callback(true) : callback(false);    }
+          data["useOfService"] ) ? callback(true) : callback(false);
+    }
 
     getInput (event) {
         console.log("inside checkInput");
@@ -70,16 +71,16 @@ class Form extends React.Component {
         return (
             <div className="form">
                 <label>Email address</label>
-                <input className="" type="email" ref="email" /><br/>
+                <input className="form-input" type="email" ref="email" /><br/>
 
                 <label className="form-label">First name</label>
-                <input type="text" ref="firstName" /><br/>
+                <input className="form-input" type="text" ref="firstName" /><br/>
 
                 <label className="form-label">Last name</label>
-                <input type="text" ref="lastName" /><br/>
+                <input className="form-input" type="text" ref="lastName" /><br/>
 
                 <label className="form-label">Nationality</label>
-                <input type="text" ref="nationality" /><br/>
+                <input className="form-input" type="text" ref="nationality" /><br/>
 
                 <div className="form-query-container">
                     <label>How will you use our service?</label><br/>

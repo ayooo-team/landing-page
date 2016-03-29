@@ -6,9 +6,29 @@
 }
 
 label {
-    display: inline-block;
-    font-size: 1em;
-    margin: 0.8em 1em;
+    display: block;
+    font-size: 1.5em;
+}
+
+.form-input {
+    display: block;
+    line-height: 4em;
+    min-width: 100%;
+}
+
+@media (min-width: 460px) {
+    .form-input {
+        margin: 1em;
+        line-height: 1.5em;
+        min-width: 40%;
+        display: inline-block;
+    }
+
+    label {
+        font-size: 1em;
+        margin: 0.8em 1em;
+        display: inline-block;
+    }
 }
 
 .form-label {
@@ -20,13 +40,33 @@ label {
 }
 
 .form-query {
-    margin: 0.2em 1em;
-    display: inline-block;
+    font-size: 1.5em;
+    text-align: justify;
+    width: 40vw;
+    margin: auto;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    display: block;
+
+    @media (min-width: 460px) {
+        font-size: 1em;
+        width: auto;
+        margin: 0.2em 1em;
+        display: inline-block;
+    }
 }
 
 .form-radio {
     margin: 0em 1em;
+    height: 20px;
+    width: 20px;
     display: inline-block;
+
+    @media (min-width: 460px) {
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+    }
 }
 
 .form-register {
