@@ -10,6 +10,10 @@
     margin: 1em 0em 0em 1em;
     display: inline-block;
     float: left;
+
+    @media (min-width: 460px) {
+        max-width: 3em;
+    }
 }
 
 .burger-menu-icon {
@@ -31,7 +35,21 @@
         margin: 2em;
         display: block;
 
-        @media (min-width: 460px) {
+    }
+}
+
+@media (min-width: 460px) {
+
+    .navbar-links-container {
+        float: right;
+        margin: 2vh 0vh;
+        padding: 0.5em;
+        background-color: $white;
+
+        .navbar-links {
+            font-size: 0.8em;
+            color: $black;
+            margin: 1vw;
             display: inline-block;
         }
     }

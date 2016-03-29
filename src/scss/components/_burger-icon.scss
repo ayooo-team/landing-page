@@ -1,9 +1,9 @@
 .burger-menu-icon {
-    width: 60px;
-    height: 45px;
+    width: 40px;
+    height: 30px;
     position: absolute;
     right: 0;
-    margin: 1em;
+    margin: 8vw;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -19,7 +19,7 @@
 .burger-menu-icon span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 5px;
     width: 100%;
     background: $black;
     border-radius: 9px;
@@ -40,11 +40,11 @@
 }
 
 .burger-menu-icon span:nth-child(2), .burger-menu-icon span:nth-child(3) {
-    top: 18px;
+    top: 12px;
 }
 
 .burger-menu-icon span:nth-child(4) {
-    top: 36px;
+    top: 24px;
 }
 
 .burger-menu-icon.menu-open span{
