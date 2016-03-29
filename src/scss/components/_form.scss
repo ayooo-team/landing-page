@@ -1,0 +1,35 @@
+.form {
+    width: 80vw;
+    margin: auto;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.8em 1em;
+}
+
+.form-label {
+    margin: 0.5em 1.8em;
+}
+
+.form-query-container {
+    margin-top: 1.5em;
+}
+
+.form-query {
+    margin: 0.2em 1em;
+    display: inline-block;
+}
+
+.form-radio {
+    margin: 0em 1em;
+    display: inline-block;
+}
+
+.form-register {
+    margin-top: 2.5em;
+    color: $light-green;
+}

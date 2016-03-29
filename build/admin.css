@@ -1,0 +1,21 @@
+body {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+
+.admin-container {
+    margin-top: 30vh;
+}
+
+.download-button {
+    border: 5px solid green;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    margin: 0 auto;
+}
+
+.download-button:hover {
+    border-color: lightgreen;    
+}
