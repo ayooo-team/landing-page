@@ -7,7 +7,7 @@ class Form extends React.Component {
 
     constructor (props) {
 
-        super (props);
+        super ();
 
         this.submit = this.submit.bind(this)
     }

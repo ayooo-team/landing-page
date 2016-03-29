@@ -2,6 +2,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const client = require('./db.js');
 
 const filePaths = {
     store: path.resolve(__dirname, '../build/store.json'),
@@ -33,23 +34,33 @@ module.exports = {
 
         var data = request.payload;
 
-        fs.readFile(filePaths.store, function(error, fileContent) {
+        client.hget('data', 'registeredUsers', function (error, dataJSON) {
 
-            fileContent = JSON.parse(fileContent);
-            fileContent.push(data);
+            if (error) throw new Error(error);
 
-            fs.writeFile(filePaths.store, JSON.stringify(fileContent, null, 4), 'utf-8', function (error) {
+            var dataArray = JSON.parse(dataJSON);
+            dataArray.push(data);
 
-                if (error) throw new Error(error);
-                console.log("Successfully written json");
-            });
-
-            fs.writeFile(filePaths.csvFile, toCSV(fileContent), 'utf-8', function (error) {
+            client.hset('data', 'registeredUsers', JSON.stringify(dataArray), function (error) {
 
                 if (error) throw new Error(error);
-                console.log("Successfully written csv");
-                reply.file(filePaths.csvFile);
+                console.log("Successfully written to database");
+
+                reply(); // jquery ajax is expecting a response
             });
+        });
+    },
+
+    download: function download (request, reply) {
+
+        // get data from db
+        client.hget('data', 'registeredUsers', function (error, dataJSON) {
+
+            if (error) {
+                throw new Error(error);
+            }
+            var csvFile = toCSV(dataJSON);
+            reply(csvFile);
         });
     }
 };
@@ -73,6 +84,6 @@ function toCSV (data) {
 
         return previous;
     }, topRow);
-    
+
     return result;
 }

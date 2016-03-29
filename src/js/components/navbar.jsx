@@ -19,7 +19,7 @@ class Navbar extends React.Component {
     }
 
     componentDidMount () {
-        console.log("initial state", this.state);
+        
         window.addEventListener('resize', this.handleResize);
     }
 
