@@ -7,7 +7,7 @@ class Form extends React.Component {
 
     constructor (props) {
 
-        super (props);
+        super ();
 
         this.checkInput = this.checkInput.bind(this)
     }
