@@ -19792,7 +19792,7 @@
 	    _createClass(Navbar, [{
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
-	            console.log("initial state", this.state);
+
 	            window.addEventListener('resize', this.handleResize);
 	        }
 	    }, {
@@ -19894,11 +19894,6 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: classes },
-	                _react2.default.createElement(
-	                    'a',
-	                    { className: 'navbar-links', href: '#splash' },
-	                    ' HOME '
-	                ),
 	                _react2.default.createElement(
 	                    'a',
 	                    { className: 'navbar-links', href: '#how-it-works' },
@@ -20487,9 +20482,9 @@
 	    function Form(props) {
 	        _classCallCheck(this, Form);
 
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Form).call(this, props));
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Form).call(this));
 
-	        _this.submit = _this.submit.bind(_this);
+	        _this.checkInput = _this.checkInput.bind(_this);
 	        return _this;
 	    }
 
@@ -20502,12 +20497,11 @@
 	                return option.checked;
 	            });
 
-	            return chosenOne[0].value;
+	            return chosenOne[0];
 	        }
 	    }, {
-	        key: 'submit',
-	        value: function submit(event) {
-
+	        key: 'checkInput',
+	        value: function checkInput(event) {
 	            event.preventDefault();
 
 	            var data = {
@@ -20517,6 +20511,12 @@
 	                nationality: this.refs.nationality.value,
 	                useOfService: this.getSelectedRadio()
 	            };
+
+	            data["email"] || data["firstName"] || data["lastName"] || data["nationality"] || data["useOfService"] === "" || "undefined" ? alert("Please complete all fields.") : this.submit(data);
+	        }
+	    }, {
+	        key: 'submit',
+	        value: function submit(data) {
 
 	            $.ajax({
 	                method: 'POST',
@@ -20540,57 +20540,65 @@
 	                    null,
 	                    'Email address'
 	                ),
-	                _react2.default.createElement('input', { type: 'email', ref: 'email' }),
+	                _react2.default.createElement('input', { className: '', type: 'email', ref: 'email' }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'label',
-	                    null,
+	                    { className: 'form-label' },
 	                    'First name'
 	                ),
 	                _react2.default.createElement('input', { type: 'text', ref: 'firstName' }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'label',
-	                    null,
+	                    { className: 'form-label' },
 	                    'Last name'
 	                ),
 	                _react2.default.createElement('input', { type: 'text', ref: 'lastName' }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'label',
-	                    null,
+	                    { className: 'form-label' },
 	                    'Nationality'
 	                ),
 	                _react2.default.createElement('input', { type: 'text', ref: 'nationality' }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
-	                    'label',
-	                    null,
-	                    'How will you use our service?'
+	                    'div',
+	                    { className: 'form-query-container' },
+	                    _react2.default.createElement(
+	                        'label',
+	                        null,
+	                        'How will you use our service?'
+	                    ),
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'form-query' },
+	                        _react2.default.createElement('input', { className: 'form-radio', type: 'radio', name: 'useOfService', value: 'Shipper', ref: 'shipper' }),
+	                        'Shipper'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'form-query' },
+	                        _react2.default.createElement('input', { className: 'form-radio', type: 'radio', name: 'useOfService', value: 'Traveller', ref: 'traveller' }),
+	                        'Traveller'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'form-query' },
+	                        _react2.default.createElement('input', { className: 'form-radio', type: 'radio', name: 'useOfService', value: 'Both', ref: 'both' }),
+	                        'Both!'
+	                    )
 	                ),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'input',
-	                    { type: 'radio', name: 'useOfService', value: 'Shipper', ref: 'shipper' },
-	                    'Shipper'
-	                ),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'input',
-	                    { type: 'radio', name: 'useOfService', value: 'Traveller', ref: 'traveller' },
-	                    'Traveller'
-	                ),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'input',
-	                    { type: 'radio', name: 'useOfService', value: 'Both', ref: 'both' },
-	                    'Both!'
-	                ),
-	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'ghost-button', onClick: this.submit },
-	                    'Register your interest'
+	                    { className: 'form-register' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { className: 'ghost-button', onClick: this.checkInput },
+	                        'REGISTER'
+	                    )
 	                )
 	            );
 	        }
@@ -20734,7 +20742,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n\n* {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nh1, h2, h3, h4 {\n  margin: 0; }\n\nh1, h2, h3, h4, p {\n  text-align: center; }\n\n* {\n  font-family: 'Roboto', sans-serif; }\n\n.display-none {\n  display: none; }\n\n.anchor-tags {\n  position: relative;\n  top: -10vh; }\n\n.ghost-button {\n  text-align: center;\n  font-size: 0.8em;\n  width: auto;\n  padding: 0.7em;\n  margin: 3em auto 0em auto;\n  border-color: #65b465;\n  border-style: solid;\n  border-width: thin;\n  border-radius: 6px;\n  cursor: pointer; }\n  .ghost-button a:link, .ghost-button a:visited {\n    text-decoration: none;\n    color: #65b465; }\n\n.navbar {\n  height: 8vh;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.navbar-logo {\n  max-width: 4em;\n  margin: 1em 0em 0em 1em;\n  display: inline-block;\n  float: left; }\n\n@media (min-width: 460px) {\n  .burger-menu-icon {\n    display: none; } }\n\n.navbar-links-container {\n  background-color: #000000;\n  opacity: 0.7;\n  padding: 1em;\n  z-index: 2; }\n  .navbar-links-container .navbar-links {\n    text-align: center;\n    color: #ffffff;\n    margin: 2em;\n    display: block; }\n    @media (min-width: 460px) {\n      .navbar-links-container .navbar-links {\n        display: inline-block; } }\n\n.burger-menu-icon {\n  width: 60px;\n  height: 45px;\n  position: absolute;\n  right: 0;\n  margin: 1em;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: .5s ease-in-out;\n  -moz-transition: .5s ease-in-out;\n  -o-transition: .5s ease-in-out;\n  transition: .5s ease-in-out;\n  cursor: pointer;\n  z-index: 3; }\n\n.burger-menu-icon span {\n  display: block;\n  position: absolute;\n  height: 9px;\n  width: 100%;\n  background: #000000;\n  border-radius: 9px;\n  opacity: 1;\n  left: 0;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: .4s ease-in-out;\n  -moz-transition: .4s ease-in-out;\n  -o-transition: .4s ease-in-out;\n  transition: .4s ease-in-out; }\n\n.burger-menu-icon span:nth-child(1) {\n  top: 0px; }\n\n.burger-menu-icon span:nth-child(2), .burger-menu-icon span:nth-child(3) {\n  top: 18px; }\n\n.burger-menu-icon span:nth-child(4) {\n  top: 36px; }\n\n.burger-menu-icon.menu-open span {\n  background: #ffffff; }\n\n.burger-menu-icon.menu-open span:nth-child(1) {\n  top: 18px;\n  width: 0%;\n  left: 50%; }\n\n.burger-menu-icon.menu-open span:nth-child(2) {\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg); }\n\n.burger-menu-icon.menu-open span:nth-child(3) {\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.burger-menu-icon.menu-open span:nth-child(4) {\n  top: 18px;\n  width: 0%;\n  left: 50%; }\n\n@media (min-width: 460px) {\n  .burger-menu-icon {\n    display: none; } }\n\n.hero-container {\n  height: 80vh;\n  padding: 1.5em 1em;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center; }\n\n.hero-background {\n  width: 100%;\n  height: 100%; }\n\n.hero-title {\n  margin: 1.5em 0em 0.5em 0.1em;\n  font-size: 4.5em;\n  font-weight: lighter;\n  letter-spacing: 10px; }\n\n.hero-description {\n  font-size: 0.8em;\n  margin: 3em 0em 0em 0em; }\n\n@media (min-width: 460px) {\n  .hero-title {\n    font-size: 4em;\n    font-weight: lighter;\n    margin: 0.5em 0em; }\n  .hero-slogan {\n    font-size: 1.5em;\n    font-weight: lighter; }\n  .hero-description {\n    font-size: 1em;\n    margin: 2em; } }\n\n.info-block-title {\n  margin: 0.5em;\n  font-size: 1.5em;\n  font-weight: lighter; }\n\n.info-block-image {\n  min-width: 0vw;\n  max-width: 50vw;\n  max-height: 35vw; }\n\n.info-block-image-SHIPPERS {\n  margin: 0.5em; }\n\n.info-block-item {\n  text-align: center;\n  margin: 3em 1.5em 3em 1.5em; }\n  .info-block-item p {\n    font-size: 1em;\n    margin: 0em 1.5em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    display: flex; }\n  .info-block-item {\n    flex: 1;\n    max-width: 40vw;\n    margin: auto; }\n  .info-block-image {\n    max-width: 25vw;\n    max-height: 15vh; } }\n\n.info-container-title {\n  font-size: 1.5em;\n  font-weight: bold;\n  width: 100%;\n  padding: 1em 0em 1em 0em; }\n\n.title-how-it-works {\n  background-color: #65b465;\n  color: #ffffff; }\n\n.content-how-it-works {\n  background-color: #b1e5b1;\n  color: #000000;\n  font-weight: lighter;\n  padding: 2em 0em 1em 0em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    padding: 2em; }\n  .content-why-ayooo {\n    padding: 0em 2em 2em 2em; } }\n\n.google-form {\n  width: 90vw;\n  min-height: 100vh;\n  font-size: 1em; }\n\n.google-form-container {\n  position: relative;\n  overflow: hidden;\n  padding-bottom: 56.25%;\n  height: 0;\n  text-align: center; }\n\n@media (min-width: 460px) {\n  .google-form-container {\n    min-height: 100vh; }\n  .google-form {\n    min-height: 100vh; } }\n\niframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%; }\n\n.footer {\n  margin: 2em 0em 0em 0em; }\n\n.social-media {\n  text-align: center; }\n\n.social-media-icon {\n  width: 1.5em;\n  margin: 0.5em 0.5em; }\n\n.footer-copyright {\n  font-size: 0.7em;\n  font-weight: lighter; }\n", ""]);
+	exports.push([module.id, "html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n\n* {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nh1, h2, h3, h4 {\n  margin: 0; }\n\nh1, h2, h3, h4, p {\n  text-align: center; }\n\n* {\n  font-family: 'Roboto', sans-serif; }\n\n.display-none {\n  display: none; }\n\n.anchor-tags {\n  position: relative;\n  top: -10vh; }\n\n.ghost-button {\n  text-align: center;\n  font-size: 0.8em;\n  width: auto;\n  padding: 0.7em;\n  margin: 3em auto 0em auto;\n  border-color: #65b465;\n  border-style: solid;\n  border-width: thin;\n  border-radius: 6px;\n  cursor: pointer; }\n  .ghost-button a:link, .ghost-button a:visited {\n    text-decoration: none;\n    color: #65b465; }\n\n.ghost-button:hover {\n  border-color: #b1e5b1; }\n\n.navbar {\n  height: 8vh;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.navbar-logo {\n  max-width: 4em;\n  margin: 1em 0em 0em 1em;\n  display: inline-block;\n  float: left; }\n  @media (min-width: 460px) {\n    .navbar-logo {\n      max-width: 3em; } }\n\n@media (min-width: 460px) {\n  .burger-menu-icon {\n    display: none; } }\n\n.navbar-links-container {\n  background-color: #000000;\n  opacity: 0.7;\n  padding: 1em;\n  z-index: 2; }\n  .navbar-links-container .navbar-links {\n    text-align: center;\n    color: #ffffff;\n    margin: 2em;\n    display: block; }\n\n@media (min-width: 460px) {\n  .navbar-links-container {\n    float: right;\n    margin: 2vh 0vh;\n    padding: 0.5em;\n    background-color: #ffffff; }\n    .navbar-links-container .navbar-links {\n      font-size: 0.8em;\n      color: #000000;\n      margin: 1vw;\n      display: inline-block; } }\n\n.burger-menu-icon {\n  width: 40px;\n  height: 30px;\n  position: absolute;\n  right: 0;\n  margin: 8vw;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: .5s ease-in-out;\n  -moz-transition: .5s ease-in-out;\n  -o-transition: .5s ease-in-out;\n  transition: .5s ease-in-out;\n  cursor: pointer;\n  z-index: 3; }\n\n.burger-menu-icon span {\n  display: block;\n  position: absolute;\n  height: 5px;\n  width: 100%;\n  background: #000000;\n  border-radius: 9px;\n  opacity: 1;\n  left: 0;\n  -webkit-transform: rotate(0deg);\n  -moz-transform: rotate(0deg);\n  -o-transform: rotate(0deg);\n  transform: rotate(0deg);\n  -webkit-transition: .4s ease-in-out;\n  -moz-transition: .4s ease-in-out;\n  -o-transition: .4s ease-in-out;\n  transition: .4s ease-in-out; }\n\n.burger-menu-icon span:nth-child(1) {\n  top: 0px; }\n\n.burger-menu-icon span:nth-child(2), .burger-menu-icon span:nth-child(3) {\n  top: 12px; }\n\n.burger-menu-icon span:nth-child(4) {\n  top: 24px; }\n\n.burger-menu-icon.menu-open span {\n  background: #ffffff; }\n\n.burger-menu-icon.menu-open span:nth-child(1) {\n  top: 18px;\n  width: 0%;\n  left: 50%; }\n\n.burger-menu-icon.menu-open span:nth-child(2) {\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg); }\n\n.burger-menu-icon.menu-open span:nth-child(3) {\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.burger-menu-icon.menu-open span:nth-child(4) {\n  top: 18px;\n  width: 0%;\n  left: 50%; }\n\n@media (min-width: 460px) {\n  .burger-menu-icon {\n    display: none; } }\n\n.hero-container {\n  height: 80vh;\n  padding: 1.5em 1em;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center; }\n\n.hero-background {\n  width: 100%;\n  height: 100%; }\n\n.hero-title {\n  margin: 1.5em 0em 0.5em 0.1em;\n  font-size: 4.5em;\n  font-weight: lighter;\n  letter-spacing: 10px; }\n\n.hero-description {\n  font-size: 0.8em;\n  margin: 3em 0em 0em 0em; }\n\n@media (min-width: 460px) {\n  .hero-title {\n    font-size: 4em;\n    font-weight: lighter;\n    margin: 0.5em 0em; }\n  .hero-slogan {\n    font-size: 1.5em;\n    font-weight: lighter; }\n  .hero-description {\n    font-size: 1em;\n    margin: 2em; } }\n\n.info-block-title {\n  margin: 0.5em;\n  font-size: 1.5em;\n  font-weight: lighter; }\n\n.info-block-image {\n  min-width: 0vw;\n  max-width: 50vw;\n  max-height: 35vw; }\n\n.info-block-image-SHIPPERS {\n  margin: 0.5em; }\n\n.info-block-item {\n  text-align: center;\n  margin: 3em 1.5em 3em 1.5em; }\n  .info-block-item p {\n    font-size: 1em;\n    margin: 0em 1.5em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    display: flex; }\n  .info-block-item {\n    flex: 1;\n    max-width: 40vw;\n    margin: auto; }\n  .info-block-image {\n    max-width: 25vw;\n    max-height: 15vh; } }\n\n.info-container-title {\n  font-size: 1.5em;\n  font-weight: bold;\n  width: 100%;\n  padding: 1em 0em 1em 0em; }\n\n.title-how-it-works {\n  background-color: #65b465;\n  color: #ffffff; }\n\n.content-how-it-works {\n  background-color: #b1e5b1;\n  color: #000000;\n  font-weight: lighter;\n  padding: 2em 0em 1em 0em; }\n\n@media (min-width: 460px) {\n  .info-block-container {\n    padding: 2em; }\n  .content-why-ayooo {\n    padding: 0em 2em 2em 2em; } }\n\n.google-form {\n  width: 90vw;\n  min-height: 100vh;\n  font-size: 1em; }\n\n.google-form-container {\n  position: relative;\n  overflow: hidden;\n  padding-bottom: 56.25%;\n  height: 0;\n  text-align: center; }\n\n@media (min-width: 460px) {\n  .google-form-container {\n    min-height: 100vh; }\n  .google-form {\n    min-height: 100vh; } }\n\niframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%; }\n\n.footer {\n  margin: 2em 0em 0em 0em; }\n\n.social-media {\n  text-align: center; }\n\n.social-media-icon {\n  width: 1.5em;\n  margin: 0.5em 0.5em; }\n\n.footer-copyright {\n  font-size: 0.7em;\n  font-weight: lighter; }\n\n.form {\n  width: 80vw;\n  margin: auto;\n  margin-top: 5vh;\n  text-align: center; }\n\nlabel {\n  display: inline-block;\n  font-size: 1em;\n  margin: 0.8em 1em; }\n\n.form-label {\n  margin: 0.5em 1.8em; }\n\n.form-query-container {\n  margin-top: 1.5em; }\n\n.form-query {\n  margin: 0.2em 1em;\n  display: inline-block; }\n\n.form-radio {\n  margin: 0em 1em;\n  display: inline-block; }\n\n.form-register {\n  margin-top: 2.5em;\n  color: #65b465; }\n", ""]);
 
 	// exports
 
