@@ -14,7 +14,6 @@ class NavbarLinks extends React.Component {
 
         return (
                 <div className={ classes }>
-                    <a className="navbar-links" href="#splash"> HOME </a>
                     <a className="navbar-links" href="#how-it-works"> HOW IT WORKS </a>
                     <a className="navbar-links" href="#why-ayooo"> WHY AYOOO </a>
                     <a className="navbar-links" href="#subscribe"> SUBSCRIBE </a>
