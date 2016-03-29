@@ -1,12 +1,16 @@
-.google-form-container {
-    text-align: center;
-    min-height: 100vh;
-}
 
 .google-form {
     width: 90vw;
     min-height: 100vh;
     font-size: 1em;
+}
+
+.google-form-container {
+    position:relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
+    text-align: center;
 }
 
 @media (min-width: 460px) {
@@ -17,4 +21,13 @@
     .google-form {
         min-height: 100vh;
     }
+}
+
+
+iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

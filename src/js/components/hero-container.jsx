@@ -16,7 +16,7 @@ class HeroContainer extends React.Component {
                 <p className='hero-description'>
                     We connect people who want to send goods somewhere with trusted travellers going in the same direction
                 </p>
-                <div className="subscribe-interest-button"><a href="#subscribe">SUBSCRIBE YOUR INTEREST</a></div>
+                <div className="ghost-button"><a href="#subscribe">SUBSCRIBE YOUR INTEREST</a></div>
             </div>
         );
     }

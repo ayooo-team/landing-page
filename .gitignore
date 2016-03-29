@@ -1,5 +1,5 @@
 # Dependency directory
 node_modules
-Procfile
-bundle.js
 npm-debug.log
+credentials.js
+bundle.js
