@@ -24,12 +24,19 @@
 }
 
 .navbar-links-container {
+    height: 100vh;
     background-color: $black;
     opacity: 0.7;
     padding: 1em;
     z-index: 2;
 
+    .navbar-links-wrapper {
+        padding-top: 20vh;
+    }
+
     .navbar-links {
+        font-size: 1.5em;
+        text-decoration: none;
         text-align: center;
         color: $white;
         margin: 2em;
@@ -41,13 +48,19 @@
 @media (min-width: 460px) {
 
     .navbar-links-container {
+        height: auto;
         float: right;
         margin: 2vh 0vh;
         padding: 0.5em;
         background-color: $white;
 
+        .navbar-links-wrapper {
+            padding-top: 0;
+        }
+
         .navbar-links {
             font-size: 0.8em;
+            font-weight: bold;
             color: $black;
             margin: 1vw;
             display: inline-block;

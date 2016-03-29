@@ -26,7 +26,9 @@ class SubscribeEmail extends React.Component {
 
     render () {
 
-        let formArea = this.state.isFormVisible ? <Form hideForm={ this.hideForm } /> : <div>Thanks!</div>
+        let formArea = this.state.isFormVisible ?
+                        <Form hideForm={ this.hideForm } /> :
+                        <div className="form-complete-message">Thank you for showing your interest!</div>
 
         return (
             <div className="container">
