@@ -9,10 +9,11 @@ class Form extends React.Component {
 
         super ();
 
-        this.checkInput = this.checkInput.bind(this)
+        this.getInput = this.getInput.bind(this)
     }
 
     getSelectedRadio () {
+        console.log("inside getSelectedRadio");
         let allOptions = [
             this.refs.shipper,
             this.refs.traveller,
@@ -26,7 +27,15 @@ class Form extends React.Component {
         return chosenOne[0];
     }
 
-    checkInput (event) {
+    checkInput (data, callback) {
+        ( data["email"] &&
+          data["firstName"] &&
+          data["lastName"] &&
+          data["nationality"] &&
+          data["useOfService"] ) ? callback(true) : callback(false);    }
+
+    getInput (event) {
+        console.log("inside checkInput");
         event.preventDefault();
 
         let data = {
@@ -37,16 +46,14 @@ class Form extends React.Component {
             useOfService: this.getSelectedRadio()
         };
 
-        ( data["email"] ||
-          data["firstName"] ||
-          data["lastName"] ||
-          data["nationality"] ||
-          data["useOfService"] === "" || "undefined") ?
-         alert("Please complete all fields.") : this.submit(data);
+        this.checkInput(data, (result) => {
+            console.log('>>>>>', result);
+            result ? alert("Please complete all fields.") : this.submit(data);
+        });
     }
 
     submit (data) {
-
+        console.log("inside submit");
         $.ajax({
             method: 'POST',
             url: "/register",
@@ -90,7 +97,7 @@ class Form extends React.Component {
                     </div>
                 </div>
                 <div className="form-register">
-                    <a className="ghost-button" onClick={ this.checkInput }>REGISTER</a>
+                    <a className="ghost-button" onClick={ this.getInput }>REGISTER</a>
                 </div>
             </div>
         );
