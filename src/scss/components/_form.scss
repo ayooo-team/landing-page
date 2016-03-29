@@ -20,8 +20,13 @@ label {
 }
 
 .form-query {
-    margin: 0.2em 1em;
-    display: inline-block;
+    margin: 1em;
+    display: block;
+} @media (min-width: 460px) {
+    .form-query {
+        margin: 0.2em 1em;
+        display: inline-block;
+    }
 }
 
 .form-radio {

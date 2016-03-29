@@ -32,7 +32,8 @@ class Form extends React.Component {
           data["firstName"] &&
           data["lastName"] &&
           data["nationality"] &&
-          data["useOfService"] ) ? callback(true) : callback(false);    }
+          data["useOfService"] ) ? callback(true) : callback(false);
+    }
 
     getInput (event) {
         console.log("inside checkInput");
