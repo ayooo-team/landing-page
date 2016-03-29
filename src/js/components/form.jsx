@@ -90,7 +90,7 @@ class Form extends React.Component {
                     </div>
                 </div>
                 <div className="form-register">
-                    <a className="ghost-button form-register" onClick={ this.checkInput }>Register your interest</a>
+                    <a className="ghost-button" onClick={ this.checkInput }>REGISTER</a>
                 </div>
             </div>
         );
