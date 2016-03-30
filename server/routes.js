@@ -45,14 +45,6 @@ module.exports = [
     },
     {
         method: 'GET',
-        path: '/registeredUsers',
-        config: {
-            auth: 'simple',
-            handler: api.getRegisteredUsers
-        }
-    },
-    {
-        method: 'GET',
         path: '/download',
         handler: api.download
     }
