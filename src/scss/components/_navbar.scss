@@ -8,7 +8,7 @@
     transition: opacity 0.2s ease;
 
     &.scrolled {
-        opacity: 0.8;
+        opacity: 1;
     }
 }
 
@@ -20,7 +20,7 @@
     transition: max-width 0.2s ease;
 
     &.scrolled {
-        max-width: 1.5em;
+        max-width: 1.8em;
     }
 }
 
