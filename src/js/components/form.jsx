@@ -24,7 +24,8 @@ class Form extends React.Component {
             return option.checked;
         });
 
-        return chosenOne[0];
+
+        return chosenOne.length > 0 ? chosenOne[0].value : false;
     }
 
     checkInput (data, callback) {
