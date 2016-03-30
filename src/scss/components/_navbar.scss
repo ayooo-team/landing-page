@@ -22,25 +22,7 @@
     &.scrolled {
         max-width: 1.5em;
     }
-
-
-    // @media (min-width: 460px) {
-    //     max-width: 3em;
-    //     transition: max-width 0.2s ease;
-    //
-    //     &.scrolled {
-    //         max-width: 2em;
-    //         margin-top: 0.5em;
-    //     }
-    // }
 }
-
-// .burger-menu-icon {
-//
-//     @media (min-width: 460px) {
-//         display: none;
-//     }
-// }
 
 .navbar-links-container {
     height: 100vh;
@@ -86,7 +68,6 @@
             margin-top: 0.5em;
         }
     }
-
 
     .navbar-links-container {
         height: auto;
