@@ -24,23 +24,26 @@ class Navbar extends React.Component {
 
         $(window).scroll(() => {
 
-
             let scroll = $(window).scrollTop();
 
-            console.log(scroll);
-            if (this.state.isDesktopView) {
+            if (scroll > 100) {
 
-                if (scroll > 100) {
+                $('.navbar').addClass('scrolled');
+                $('.navbar-logo').addClass('scrolled');
 
-                    $('.navbar').addClass('scrolled');
-                    $('.navbar-logo').addClass('scrolled');
-                    $('.navbar-links-container').addClass('scrolled');
+                if (!this.state.isDesktopView) {
+
+                    $('.navbar-links-container').addClass( 'scrolled');
                 }
-                if (scroll <= 100) {
+            }
+            if (scroll <= 100) {
 
-                    $('.navbar').removeClass('scrolled');
-                    $('.navbar-logo').removeClass('scrolled');
-                    $('.navbar-links-container').removeClass('scrolled');
+                $('.navbar').removeClass('scrolled');
+                $('.navbar-logo').removeClass('scrolled');
+
+                if (!this.state.isDesktopView) {
+
+                    $('.navbar-links-container').removeClass( 'scrolled');
                 }
             }
         });

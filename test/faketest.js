@@ -14,6 +14,5 @@ tape('This is a fake test', (t) => {
 tape('this is a react test', (t) => {
 
     const rendered = shallowRenderer(<AppContainer />);
-    console.log(rendered);
     t.end();
 });

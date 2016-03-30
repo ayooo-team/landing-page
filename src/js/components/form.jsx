@@ -24,7 +24,8 @@ class Form extends React.Component {
             return option.checked;
         });
 
-        return chosenOne[0];
+
+        return chosenOne.length > 0 ? chosenOne[0].value : false;
     }
 
     checkInput (data, callback) {
@@ -49,7 +50,7 @@ class Form extends React.Component {
 
         this.checkInput(data, (result) => {
             console.log('>>>>>', result);
-            result ? alert("Please complete all fields.") : this.submit(data);
+            result ? this.submit(data) : alert("Please complete all fields.");
         });
     }
 
