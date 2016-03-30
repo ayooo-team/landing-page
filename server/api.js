@@ -11,25 +11,6 @@ const filePaths = {
 
 module.exports = {
 
-    getRegisteredUsers: function getRegisteredUsers (request, reply) {
-
-        // does file exist?
-        fs.stat(filePaths.store, function (error, stats) {
-            if (error) {
-
-                return reply("Nothing to see yet.");
-            }
-            fs.readFile(filePaths.store, function (error, file) {
-
-                if (error) throw new Error(error);
-
-                var converted = toCSV(file.toString());
-
-                reply(file.toString());
-            });
-        });
-    },
-
     saveFormData: function saveFormData (request, reply) {
 
         var data = request.payload;
