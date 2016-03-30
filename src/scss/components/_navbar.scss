@@ -14,13 +14,14 @@
 
 .navbar-logo {
     max-width: 4em;
-    margin: 1em 0em 0em 1em;
+    margin: 10px 0px 0px 18px;
     display: inline-block;
     float: left;
     transition: max-width 0.2s ease;
 
     &.scrolled {
-        max-width: 1.8em;
+        margin: 13px 18px;
+        max-width: 28px;
     }
 }
 
