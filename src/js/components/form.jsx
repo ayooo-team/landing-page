@@ -13,7 +13,7 @@ class Form extends React.Component {
     }
 
     getSelectedRadio () {
-        
+
         let allOptions = [
             this.refs.shipper,
             this.refs.traveller,
@@ -36,7 +36,7 @@ class Form extends React.Component {
           data["useOfService"] ) ? callback(true) : callback(false);
     }
 
-    getInput (event)
+    getInput (event) {
 
         event.preventDefault();
 
