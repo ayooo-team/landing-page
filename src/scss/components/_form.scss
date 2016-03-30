@@ -7,13 +7,18 @@
 
 label {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .form-input {
     display: block;
-    line-height: 4em;
+    line-height: 2em;
     min-width: 100%;
+    font-size: 1.2em;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 @media (min-width: 460px) {
@@ -22,6 +27,7 @@ label {
         line-height: 1.5em;
         min-width: 40%;
         display: inline-block;
+        font-size: 1em;
     }
 
     label {
