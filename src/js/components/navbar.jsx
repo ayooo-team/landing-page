@@ -58,16 +58,12 @@ class Navbar extends React.Component {
             this.setState({
                 isDesktopView: true,
                 isMenuOpen: true
-            }, () => {
-                console.log("desktop view?", this.state.isDesktopView);
-            });
+            };
         } else if (windowWidth < 460 && this.state.isDesktopView) {
 
             this.setState({
                 isDesktopView: false,
                 isMenuOpen: false
-            }, () => {
-                console.log("desktop view?", this.state.isDesktopView);
             });
         }
     }
