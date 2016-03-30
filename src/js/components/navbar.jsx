@@ -26,7 +26,7 @@ class Navbar extends React.Component {
 
             let scroll = $(window).scrollTop();
 
-            if (scroll > 100) {
+            if (scroll > 50) {
 
                 $('.navbar').addClass('scrolled');
                 $('.navbar-logo').addClass('scrolled');
@@ -36,7 +36,7 @@ class Navbar extends React.Component {
                     $('.navbar-links-container').addClass( 'scrolled');
                 }
             }
-            if (scroll <= 100) {
+            if (scroll <= 50) {
 
                 $('.navbar').removeClass('scrolled');
                 $('.navbar-logo').removeClass('scrolled');
