@@ -13,7 +13,7 @@ class Form extends React.Component {
     }
 
     getSelectedRadio () {
-        console.log("inside getSelectedRadio");
+
         let allOptions = [
             this.refs.shipper,
             this.refs.traveller,
@@ -37,7 +37,7 @@ class Form extends React.Component {
     }
 
     getInput (event) {
-        console.log("inside checkInput");
+
         event.preventDefault();
 
         let data = {
@@ -49,19 +49,19 @@ class Form extends React.Component {
         };
 
         this.checkInput(data, (result) => {
-            console.log('>>>>>', result);
+
             result ? this.submit(data) : alert("Please complete all fields.");
         });
     }
 
     submit (data) {
-        console.log("inside submit");
+
         $.ajax({
             method: 'POST',
             url: "/register",
             data: data,
             success: function (reply) {
-                console.log(reply);
+
                 this.props.hideForm();
             }.bind(this)
         });
